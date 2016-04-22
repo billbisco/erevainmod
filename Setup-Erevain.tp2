@@ -38,6 +38,57 @@ ADD_KIT ~Infiltrator~ //Infiltrator, in this example, is the internal name of th
   ~Infiltrator                0       1       1       1       1       1       1       1       1~
   // appended to DUALCLAS.2da
   ~Infiltrator                1       1       1       0       0       0~
+/* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+~erevainmod/kits/infiltrator/biclabth01.2da~
+/* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+~K_F_H    K_F_D   K_F_G   K_F_E   K_F_HE   K_F_HL   K_F_HO~
+/* This is the "unusable" value you want for you kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+~0x00040000 4 ~
+/* This is the High Level Ability Abbreviation (see LUABBR.2DA).  Normal values are Fi0, Pa0, etc. */
+~Th0~
+/* This is the TOB starting equipment list. Put a * if you don't want something. See 25STWEAP.2DA. */
+~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+/* These are the strings you want for the lower, mixed and help
+ * descriptions for your kit. */
+SAY ~ infiltrator~ 
+SAY ~Infiltrator~
+SAY ~INFILTRATOR: The Infiltrator is the master of stealth and mastering unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in those thieving skills.
+
+Advantages:
+
+- Access to several innate abilities, which grow in frequency and availability as levels advance:
+
+1. Luck ( 2 uses at level 2)
+
+2. Non-Detection (2 uses at level 3)
+
+3. Knock (2 uses at level 4, 1 additional use at levels 7,10,16,22,28,34,40)
+
+4. Invisibility (2 uses at level 5)
+
+5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36,42)
+
+6. Dimension Door (at level 11,17,23,29,35,41)
+
+7. Improved Invisibility (at level 8)
+
+8. Farsight (at level 9,15,21,27,33,39)
+
+9. True Sight (at level 13, 19, 25, 31, 37,43)
+
+10. Mass Invisibility (at level 14,20,26,32,38,41)
+
+Disadvantages:
+
+- Gets only 15 points to distribute thieving points per level.~
+
+/* This snippet shows how to use the kit number as a variable name to
+ * assign this kit to a creature. The "0" and the "0x4000" are necessary. 
+ * These offsets should be the same for all CREs. 
+COPY ~mymod/fighter.cre~ ~override/fighter.cre~ 
+  WRITE_SHORT   0x244 0
+  WRITE_SHORT   0x246 0x4000 + ~%WWARCH%~
+*/
 
 
 // These two lines were created by CamDawg. It's a new state that checks if NPC is able to talk. USE this in your mod. See the dialogue for details.
