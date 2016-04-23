@@ -41,7 +41,7 @@ ADD_KIT ~Infiltrator~ //Infiltrator, in this example, is the internal name of th
 /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
 ~erevain/kits/infiltrator/biclabth01.2da~
 /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
-~K_F_H    K_F_D   K_F_G   K_F_E   K_F_HE   K_F_HL   K_F_HO~
+~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
 /* This is the "unusable" value you want for you kit and also the class value. These would normally appear at the end of KITLIST.2DA */
 ~0x00040000 4 ~
 /* This is the High Level Ability Abbreviation (see LUABBR.2DA).  Normal values are Fi0, Pa0, etc. */
