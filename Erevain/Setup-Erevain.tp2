@@ -90,3 +90,11 @@ COPY ~mymod/fighter.cre~ ~override/fighter.cre~
   WRITE_SHORT   0x246 0x4000 + ~%WWARCH%~
 */
 
+//EE compatibility using the fl#add_kit_ee.tpa file in the mod folder
+INCLUDE ~erevain/kits/infiltrator/fl#add_kit_ee.tpa~
+
+LAF fl#add_kit_ee
+   STR_VAR
+     kit_name = Infiltrator
+    thiefskl = ~30 15~
+END
