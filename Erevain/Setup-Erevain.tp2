@@ -55,32 +55,51 @@ SAY ~Infiltrator~
 SAY ~INFILTRATOR: The Infiltrator is the master of stealth and mastering unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in those thieving skills.
 
 Advantages:
-
 - Access to several innate abilities, which grow in frequency and availability as levels advance:
-
 1. Luck ( 2 uses at level 2)
-
 2. Non-Detection (2 uses at level 3)
-
 3. Knock (2 uses at level 4, 1 additional use at levels 7,10,16,22,28,34,40)
-
 4. Invisibility (2 uses at level 5)
-
 5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36,42)
-
 6. Dimension Door (at level 11,17,23,29,35,41)
-
 7. Improved Invisibility (at level 8)
-
 8. Farsight (at level 9,15,21,27,33,39)
-
 9. True Sight (at level 13, 19, 25, 31, 37,43)
-
 10. Mass Invisibility (at level 14,20,26,32,38,41)
-
 Disadvantages:
-
 - Gets only 15 points to distribute thieving points per level.~
+
+// 
+// change regular spell to innate.  Below Macro is from Divine Remix Authors: Andyr, CamDawg and NiGHTMARE.  Thank you and Mike1072 for the hint!
+DEFINE_PATCH_MACRO ~spell_to_innate~ BEGIN
+  READ_LONG  0x64 "abil_off" ELSE 0
+  READ_SHORT 0x68 "abil_num" ELSE 0
+  READ_ASCII ("%abil_off%" + 0x04) "bam" (8) // reads the bam filename from ability
+  WRITE_SHORT 0x1C 4                         // sets spell type to innate (4)
+  WRITE_LONG  0x34 1                         // sets spell level to 1 to avoid scripting issues
+  WRITE_EVALUATED_ASCII 0x3A "%bam%" #8      // writes the bam filename from abilities to spell icon
+  FOR ( index = 0 ; index < abil_num ; index = index + 1 ) BEGIN
+    WRITE_SHORT ("%abil_off%" + 0x02 + (0x28 * "%index%")) 4 // changes ability icon location to innate (4)
+    READ_SHORT  ("%abil_off%" + 0x12 + (0x28 * "%index%")) "speed" // reads casting speed
+    PATCH_IF ("%speed%" > 3) BEGIN
+      WRITE_SHORT  ("%abil_off%" + 0x12 + (0x28 * "%index%")) ("%speed%" - 2) // reduces casting speed
+    END ELSE BEGIN
+      WRITE_SHORT  ("%abil_off%" + 0x12 + (0x28 * "%index%")) 0 // makes instant
+    END
+  END
+END
+
+COPY_EXISTING ~SPWI209.spl~ ~override/BIIN01.spl~ // Luck
+              ~SPWI310.spl~ ~override/BIIN02.spl~ // Non-Detection
+              ~SPWI207.spl~ ~override/BIIN03.spl~ // Knock
+              ~SPWI206.spl~ ~override/BIIN04.spl~ // Invisiiity
+              ~SPWI205.spl~ ~override/BIIN05.spl~ // Find Traps
+              ~SPWI402.spl~ ~override/BIIN06.spl~ // Dimension Door
+              ~SPWI405.spl~ ~override/BIIN07.spl~ // Improved Invisibility
+              ~SPWI424.spl~ ~override/BIIN08.spl~ // Farsight
+              ~SPWI609.spl~ ~override/BIIN09.spl~ // True Sight
+              ~SPWI721.spl~ ~override/BIIN10.spl~ // Mass Invisibility
+  LAUNCH_PATCH_MACRO ~spell_to_innate~ // Takes all of the copied and renamed spells above and runs the earlier defined macro
 
 /* This snippet shows how to use the kit number as a variable name to
  * assign this kit to a creature. The "0" and the "0x4000" are necessary. 
