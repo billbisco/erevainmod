@@ -93,7 +93,7 @@ COPY_EXISTING ~SPWI209.spl~ ~override/BIIN01.spl~ // Luck
               ~SPWI310.spl~ ~override/BIIN02.spl~ // Non-Detection
               ~SPWI207.spl~ ~override/BIIN03.spl~ // Knock
               ~SPWI206.spl~ ~override/BIIN04.spl~ // Invisiiity
-              ~SPWI205.spl~ ~override/BIIN05.spl~ // Find Traps
+              ~SPPR205.spl~ ~override/BIIN05.spl~ // Find Traps
               ~SPWI402.spl~ ~override/BIIN06.spl~ // Dimension Door
               ~SPWI405.spl~ ~override/BIIN07.spl~ // Improved Invisibility
               ~SPWI424.spl~ ~override/BIIN08.spl~ // Farsight
