@@ -52,24 +52,23 @@ ADD_KIT ~Infiltrator~ //Infiltrator, in this example, is the internal name of th
  * descriptions for your kit. */
 SAY ~ infiltrator~ 
 SAY ~Infiltrator~
-SAY ~INFILTRATOR: The Infiltrator is the master of stealth and mastering unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in those thieving skills.
+SAY ~INFILTRATOR: The master of stealth and invading unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in thieving aptitude.
 
 Advantages:
 - Access to several innate abilities, which grow in frequency and availability as levels advance:
-1. Luck ( 2 uses at level 2)
+1. Luck (2 uses at level 2)
 2. Non-Detection (2 uses at level 3)
 3. Knock (2 uses at level 4, 1 additional use at levels 7,10,16,22,28,34,40)
 4. Invisibility (2 uses at level 5)
-5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36,42)
-6. Dimension Door (at level 11,17,23,29,35,41)
-7. Improved Invisibility (at level 8)
+5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36)
+6. Improved Invisibility (at level 8)
+7. Dimension Door (at level 11,17,23,29,35)
 8. Farsight (at level 9,15,21,27,33,39)
-9. True Sight (at level 13, 19, 25, 31, 37,43)
-10. Mass Invisibility (at level 14,20,26,32,38,44)
+9. True Sight (at level 13, 19, 25, 31, 37)
+10. Mass Invisibility (at level 14,20,26,32,38)
 Disadvantages:
 - Gets only 15 points to distribute thieving points per level.~
 
-// 
 // change regular spell to innate.  Below Macro is from Divine Remix Authors: Andyr, CamDawg and NiGHTMARE.  Thank you and Mike1072 for the hint!
 DEFINE_PATCH_MACRO ~spell_to_innate~ BEGIN
   READ_LONG  0x64 "abil_off" ELSE 0
