@@ -116,3 +116,16 @@ LAF fl#add_kit_ee
      kit_name = Infiltrator
     thiefskl = ~30 15~
 END
+
+
+// 200 Install Character
+
+// If File Exists Then Do this else do this
+
+CREATE CRE Erevain
+    SAY NAME1 ~Jill~
+    SAY NAME2 ~Jill~
+    ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 identified weapon EQUIP
+
+WRITE_LONG  0x028 0x6300   Animation
+WRITE_ASCII 0x2cc ~BILLB~ #8 // Dialog
