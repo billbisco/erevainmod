@@ -123,9 +123,16 @@ END
 // If File Exists Then Do this else do this
 
 CREATE CRE Erevain
-    SAY NAME1 ~Jill~
-    SAY NAME2 ~Jill~
+    WRITE_SHORT 0x0004 ~~ // Signature ('CRE')  (I assume this can be left blank?)
+    WRITE_SHORT 0x0004 ~V1.0~ // Version ('V1.0')
+    SAY NAME1 ~Erevain~ // Name
+    SAY NAME2 ~Erevain~ // Tooltip
+    WRITE_LONG 0x0010 ~~ // Flags (I assume blank is no flag?  How would I choose Permanent Corpse (Flag 2)?
+    WRITE_LONG 0x0014 ~90~ // XP Gained for Killing Creature
+    WRITE_LONG 0x0018 ~3~ // Creature Power Level (for summoning spells) / XP of the creature (for party members)
+    WRITE_LONG 0x001c ~81~ // Gold Carried
+    
     ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 identified weapon EQUIP
 
-WRITE_LONG  0x028 0x6300   Animation
+WRITE_LONG  0x028 0x6300//   Animation
 WRITE_ASCII 0x2cc ~BILLB~ #8 // Dialog
