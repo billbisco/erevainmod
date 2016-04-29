@@ -122,15 +122,32 @@ END
 
 // If File Exists Then Do this else do this
 
-CREATE CRE Erevain
-    WRITE_SHORT 0x0004 ~~ // Signature ('CRE')  (I assume this can be left blank?) 4 (char array)
-    WRITE_SHORT 0x0004 ~V1.0~ // Version ('V1.0') 4 (char array)
+CREATE CRE Erevain // Cre File format found at http://gibberlings3.net/iesdp/file_formats/ie_formats/cre_v1.htm 
+    WRITE_ASCII 0x0004 ~CRE~ // Signature ('CRE')  (I assume this can be left blank?) 4 (char array)
+    WRITE_ASCII 0x0004 ~V1.0~ // Version ('V1.0') 4 (char array)
     SAY NAME1 ~Erevain~ // Name 4 (strref)
     SAY NAME2 ~Erevain~ // Tooltip 4 (strref) 
-    WRITE_LONG 0x0010 ~~ // Flags (I assume blank is no flag?  How would I choose Permanent Corpse (Flag 2)? 4 (dword)
+    WRITE_LONG 0x0010 ~~ // Flags (Use 0x0010 BIT2 for Flag2 (Permanent Corpse).  Use WRITE_LONG 0x10 (BIT2 | BIT3) for 2 flags  See http://gibberlings3.net/forums/index.php?showtopic=314
     WRITE_LONG 0x0014 ~90~ // XP Gained for Killing Creature 4 (dword)
     WRITE_LONG 0x0018 ~3~ // Creature Power Level (for summoning spells) / XP of the creature (for party members) 4 (dword)
     WRITE_LONG 0x001c ~81~ // Gold Carried 4 (dword)
+    WRITE_LONG 0x0020 ~~ // Permanent status flags (STATE.IDS) 4 (dword)
+    WRITE_SHORT 0x0024 ~21~ // Current Hit Points 2 (word)
+    WRITE_SHORT 0x0026 ~21~ // Maximum Hit Points 2 (word)
+    WRITE_LONG 00x0028 0x6101 // Animation ID (ANIMATE.IDS) 4 (dword) Find these at http://gibberlings3.net/iesdp/files/ids/bg2/animate.htm or IWD Equivalent
+    WRITE_BYTE 0x002c 30 // Metal Color Index 1 (byte)
+    WRITE_BYTE 0x002d 66 // Minor Color Index 1 (byte)
+    WRITE_BYTE 0x002e 57 // Major Co1or Index 1 (byte)
+    WRITE_BYTE 0x002f 17 // Skin Color Index 1 (byte)
+    WRITE_BYTE 0x0030 58 // Leather Color Index 1 (byte)
+    WRITE_BYTE 0x0031 31 // Armor Color Index 1 (byte)
+    WRITE_BYTE 0x0032 25 // Hair Color Index 1 (byte)
+    WRITE_BYTE 0x0033 25 // Effect Flag Index 1 (byte)
+    
+    
+    
+    
+    
     
     ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 identified weapon EQUIP
 
