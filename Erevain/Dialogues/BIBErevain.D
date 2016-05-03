@@ -7,7 +7,7 @@ END
  
 APPEND DEREVAIN
  
-IF ~~ mod_11
+IF ~~ mod_7
 SAY ~I think that's an interesting proposal.  Yes, I would like to.~ 
 IF ~~ THEN REPLY ~Sure. Join the party~ DO ~JoinParty()~ EXIT
 IF ~~ THEN REPLY ~Nah, go away.~ EXIT
