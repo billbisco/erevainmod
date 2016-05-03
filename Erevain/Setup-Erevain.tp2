@@ -120,8 +120,60 @@ END
 
 // 200 Install Character
 
+COPY ~Erevain/Characters/Erevain.cre~ ~override/Erevain.cre~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
+SAY NAME1 ~Erevain~
+SAY NAME2 ~Erevain~
+SAY MORALE ~I must hide! Now!~
+SAY HAPPY ~I have grown quite fond of this company.~
+SAY UNHAPPY_ANNOYED ~I don't like the path that we're taking.~
+SAY UNHAPPY_SERIOUS ~We muat make a serious change soon!~
+SAY UNHAPPY_BREAKING ~I am long past done with you. Good riddance!~
+SAY LEADER ~My multiple talents make me the natural singlular leader.~
+SAY TIRED ~I need to meditate.~
+SAY BORED ~Elves can be patient, but not this patient!~
+SAY BATTLE_CRY1 ~With true strikes!~
+SAY BATTLE_CRY2 ~With Elven speed!~
+SAY BATTLE_CRY3 ~By Corellon's sword, you shall fall!~
+SAY BATTLE_CRY4 ~Taste my Elven steel!~
+SAY BATTLE_CRY5 ~Fie to ye foul foes!~
+SAY DAMAGE ~Agh.~ 
+SAY DYING ~I need healing quickly.~ 
+SAY HURT ~That'll leave a scar.~
+SAY AREA_FOREST ~Ahh. How I relish such beautiful forests.~
+SAY AREA_CITY ~Another city. Perhaps some of my kind dwell here.~
+SAY AREA_DUNGEON ~Work together friends, danger is likely nearby.~
+SAY AREA_DAY ~Fair weather is most welcome.~
+SAY AREA_NIGHT ~Be weary friends, most unsultry creatures lurk at this hour.~
+SAY SELECT_COMMON1 ~How can I serve?~
+SAY SELECT_COMMON2 ~Yes?~
+SAY SELECT_COMMON3 ~Which talent do you require?~
+SAY SELECT_COMMON4 ~Anytime; anywhere.~
+SAY SELECT_COMMON5 ~Need a spell?~
+SAY SELECT_COMMON6 ~Corellon would show ye true glory, if you let him.~
+SAY SELECT_ACTION1 ~By Corellon's grace.~
+SAY SELECT_ACTION2 ~ With Elven speed.~
+SAY SELECT_ACTION3 ~Absolutely.~
+SAY SELECT_ACTION4 ~So it is.~
+SAY SELECT_ACTION5 ~ May Erevan Ilesere keep us disguised.~
+SAY SELECT_ACTION6 ~For beauty.~
+SAY SELECT_ACTION7 ~With humble pleasure.~
+SAY SELECT_RARE1 ~It is an honor to serve the cause of light.~
+SAY SELECT_RARE2 ~Dance to the rhythm of life!~
+SAY CRITICAL_HIT ~That's it!~
+SAY CRITICAL_MISS ~Argh!~
+SAY TARGET_IMMUNE ~Another weapon! Now!~
+SAY INVENTORY_FULL ~I need a large bag of holding. The item is on the ground.~
+SAY SPELL_DISRUPTED ~My spell is faulty!~
+SAY SET_A_TRAP ~A token of my genius.~ 
+SAY HIDDEN_IN_SHADOWS ~One with the shadows.~
+SAY PICKED_POCKET ~I only take what I must.~
+SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
+
+
+
 // If File Exists Then Do this else do this
 
+/*   // Can't use the code below until I get some more guidance.  Until then, I will use file from mod directly
 CREATE CRE Erevain // Cre File format found at http://gibberlings3.net/iesdp/file_formats/ie_formats/cre_v1.htm 
     WRITE_ASCII 0x0004 ~CRE~ // Signature ('CRE') 4 (char array)
     WRITE_ASCII 0x0004 ~V1.0~ // Version ('V1.0') 4 (char array)
@@ -249,7 +301,7 @@ CREATE CRE Erevain // Cre File format found at http://gibberlings3.net/iesdp/fil
     WRITE_LONG 0x02c4  // Offset to effects 4 (dword)
     WRITE_LONG 0x02c8  // Count of effects 4 (dword)
     WRITE_ASCII 0x02cc DEREVAIN.DLG // Dialog file 8 (resref)
-    
+    */
     
     
     
