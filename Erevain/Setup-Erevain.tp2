@@ -170,17 +170,49 @@ SAY PICKED_POCKET ~I only take what I must.~
 SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~O#Bran~  #8  // dialogue file where we'll put Branwen's greeting dialogue.
-// WRITE_ASCII 0x280 ~O#Bran~  #32 // death variable - when we want to refer to Branwen in the game, we'll call her O#Bran. For example, InParty("O#Bran") means that Branwen is in party.
+ WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erevain in the game, we'll call him BIErevain. For example, InParty("BIErevain") means that Erevain is in party.
 // WRITE_ASCII 0X34  ~BRANWES~ #8  // small portrait
 // WRITE_ASCII 0x3c  ~BRANWEM~ #8  // medium portrait
-COMPILE ~Erevain/Dialogue/BIErevain.d~  // Erevain's greeting dialogue will go here. 
-	~Erevain/Dialogue/BIBErevain.d~ // All Branwen's banters with other party members will go here.
-	~Erevain/Dialogue/BIErevainJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
-	~Erevain/Dialogue/BIErevainP.d~ // Erevain's leaving party dialogue will go here.
-
+COMPILE ~Erevain/Dialogue/BIEre.d~  // Erevain's greeting dialogue will go here. 
+	~Erevain/Dialogue/BIBEre.d~ // All Erevain's banters with other party members will go here.
+	~Erevain/Dialogue/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
+	~Erevain/Dialogue/BIEreP.d~ // Erevain's leaving party dialogue will go here.
 //	~Branwen/Scripts/O#BranS.baf~ // Erevain's script.
 //	~Branwen/Scripts/O#BranD.baf~ // Erevain's dream script for events at rest. If you want your NPC to talk to you at rest, add scripting here.
 //	~Branwen/Scripts/O#BranF.baf~ // Erevain's "fixing" script. Remember how various modders advised you to "select your NPC and press K"? Well, that's how they do it.
+
+// These files add Erevain's scripts and dialogue files to the game(except for the banter file, that's below). The first block is for SoA-only installs, the second one is for ToB.
+// Here's the order: death variable, leaving party file, main dialogue file(J for joined), dream script for SoA.
+// Or death variable, leaving party file, main dialogue file(J for joined), dream script for SoA, leaving party file for ToB, main dialogue(J) file for ToB, ToB dream script, ToB main script.
+
+APPEND ~pdialog.2da~
+~BIEre        BIEreP             BIEreJ            BIEreD~
+UNLESS ~BIEre~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~BIEre        BIEreP             BIEreJ            BIEreD             BIEre25P             BIEre25J             BIEre25D       BIEre25S~
+UNLESS ~BIEre~
+IF ~25POST~
+
+// These files add Branwen's banter files to the game. The first block is for SoA-only installs, the second one is for ToB.
+// Here's the order: death variable, SoA banter file for SoA. Or death variable, SoA banter file, ToB banter file for ToB.
+APPEND ~interdia.2da~
+~BIEre       BIBEre~
+UNLESS ~BIEre~
+UNLESS ~25FILE~
+
+APPEND ~interdia.2da~
+~BIEre       BIBEre       BIEre25~
+UNLESS ~BIEre~
+IF ~25FILE~
+
+// Some modders use README flag instead. Not me. Every user is presented with a readme file so that they know where to find Branwen, whether she is romanceable and so on.
+// AT_INTERACTIVE_EXIT ~VIEW Erevain/Readme-Erevain.txt~
+// If you want to use README flag instead, use this, just place it in the top part of your file, right after VERSION line but before BEGIN line, and uncomment it. Your players will be asked whether they want to read a readme:
+// README ~Erevain/Readme-Erevain.txt~
+// This is really all there is about a simple NPC mod. Since you will probably want your mod to be translated into multiple languages, you can read on the forums about translation files, or .tra files(files with strings that look like @100 = ~Hello!~). This mod is not fully traified for ease-of-use reasons - Branwen NPC is a tutorial of sorts, after all, so her files should be easy enough to read.
+
 
 
 
@@ -317,6 +349,5 @@ CREATE CRE Erevain // Cre File format found at http://gibberlings3.net/iesdp/fil
     */
 
   /* ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 identified weapon EQUIP
-
-WRITE_LONG  0x028 0x6300//   Animation
-WRITE_ASCII 0x2cc ~BILLB~ #8 // Dialog */
+/ WRITE_LONG  0x028 0x6300//   Animation
+/ WRITE_ASCII 0x2cc ~BILLB~ #8 // Dialog */
