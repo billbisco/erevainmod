@@ -121,10 +121,8 @@ END
 // 200 Install Character
 
 COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
-
-
-
-COPY ~Erevain/Characters/Erevain.cre~ ~override/Erevain.cre~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
+COPY_EXISTING ~Erevain.cre~ ~override~
+//COPY ~Erevain/Characters/Erevain.cre~ ~override/Erevain.cre~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
 SAY MORALE ~I must hide! Now!~
