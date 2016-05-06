@@ -120,6 +120,10 @@ END
 
 // 200 Install Character
 
+COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
+
+
+/*
 COPY ~Erevain/Characters/Erevain.cre~ ~override/Erevain.cre~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
@@ -206,11 +210,7 @@ APPEND ~interdia.2da~
 ~BIEre       BIBEre       BIBEre25~
 UNLESS ~BIEre~
 IF ~25FILE~
-
-// Some modders use README flag instead. Not me. Every user is presented with a readme file so that they know where to find Erevain, whether he is romanceable and so on.
-// AT_INTERACTIVE_EXIT ~VIEW Erevain/Readme-Erevain.txt~
-// If you want to use README flag instead, use this, just place it in the top part of your file, right after VERSION line but before BEGIN line, and uncomment it. Your players will be asked whether they want to read a readme:
-// README ~Erevain/Readme-Erevain.txt~
+*/
 
 
 
