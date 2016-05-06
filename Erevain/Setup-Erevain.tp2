@@ -123,7 +123,7 @@ END
 COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
 
 
-/*
+
 COPY ~Erevain/Characters/Erevain.cre~ ~override/Erevain.cre~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
@@ -172,6 +172,8 @@ SAY SET_A_TRAP ~A token of my genius.~
 SAY HIDDEN_IN_SHADOWS ~One with the shadows.~
 SAY PICKED_POCKET ~I only take what I must.~
 SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
+
+/*
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
 WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erevain in the game, we'll call him BIEre. For example, InParty("BIEre") means that Erevain is in party.
