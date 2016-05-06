@@ -8,8 +8,9 @@ END
 APPEND DEREVAIN
  
 IF ~~ mod_12
-SAY ~I think that's an interesting proposal.  Let me think about it.~ 
-IF ~~ EXIT
+SAY ~I think that's an interesting proposal.  Yes, I would like to.  Fine.  FINE!~ 
+IF ~~ THEN REPLY ~Sure. Join the party~ DO ~JoinParty()~ EXIT
+IF ~~ THEN REPLY ~Nah, go away.~ EXIT
 END
  
 END // closes the APPEND command
