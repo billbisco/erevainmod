@@ -195,7 +195,7 @@ APPEND ~pdialog.2da~
 UNLESS ~BIEre~
 IF ~25POST~
 
-// These files add Branwen's banter files to the game. The first block is for SoA-only installs, the second one is for ToB.
+// These files add Erevain's banter files to the game. The first block is for SoA-only installs, the second one is for ToB.
 // Here's the order: death variable, SoA banter file for SoA. Or death variable, SoA banter file, ToB banter file for ToB.
 APPEND ~interdia.2da~
 ~BIEre       BIBEre~
@@ -203,16 +203,14 @@ UNLESS ~BIEre~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
-~BIEre       BIBEre       BIEre25~
+~BIEre       BIBEre       BIBEre25~
 UNLESS ~BIEre~
 IF ~25FILE~
 
-// Some modders use README flag instead. Not me. Every user is presented with a readme file so that they know where to find Branwen, whether she is romanceable and so on.
+// Some modders use README flag instead. Not me. Every user is presented with a readme file so that they know where to find Erevain, whether he is romanceable and so on.
 // AT_INTERACTIVE_EXIT ~VIEW Erevain/Readme-Erevain.txt~
 // If you want to use README flag instead, use this, just place it in the top part of your file, right after VERSION line but before BEGIN line, and uncomment it. Your players will be asked whether they want to read a readme:
 // README ~Erevain/Readme-Erevain.txt~
-// This is really all there is about a simple NPC mod. Since you will probably want your mod to be translated into multiple languages, you can read on the forums about translation files, or .tra files(files with strings that look like @100 = ~Hello!~). This mod is not fully traified for ease-of-use reasons - Branwen NPC is a tutorial of sorts, after all, so her files should be easy enough to read.
-
 
 
 
