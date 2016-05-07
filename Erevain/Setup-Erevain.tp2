@@ -1,12 +1,31 @@
+
 BACKUP ~Erevain/Backup~ 
+UTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation error, he'll know where to post his bug reports
 
-AUTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation error, he'll know where to post his bug reports
+ALWAYS // Anything in this block will execute for every component.
+  ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN  // This ALWAYS/ACTION_IF combo will convert charsets for use on EE games.  You can delete this entire ALWAYS or ACTION_IF block if your mod can not be installed on an EE game. Also delete the lib and translations/iconv folders. 
+    OUTER_SET cd_always = 1   // This ACTION_IF and the OUTER_SET following ensure this block only executes once per install, no matter how may components are selected.
+    ACTION_DEFINE_ARRAY cdnoconvert BEGIN setup END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
+    ACTION_DEFINE_ARRAY cdreload BEGIN real_mod END // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
+    LAF HANDLE_CHARSETS INT_VAR infer_charset = 1 STR_VAR tra_path = EVAL ~%MOD_FOLDER%/languages~ noconvert_array = cdnoconvert reload_array = cdreload  END  // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
+  END
+  // If you do have stuff you want to execute for every component, put it here.
+END
+VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will++************************
+// If you choose to not use an HTML readme, you can delete the g3readme.css from the style folder.
 
-VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will know which version a player with a bug report has installed. V4, v1alpha, v1.23 will work too.
+AUTO_TRA ~real_mod/languages/%s~ //~%~
 
-AUTO_TRA ~Erevain/%s~ // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
+LANGUAGE
+  ~English~ // Name as displayed in WeiDU's language menu
+  ~english~ // Name of folder actually containing tra files.
+  ~real_mod/languages/english/real_mod.tra~ // tra file containing game content strings.
+  ~real_mod/languages/english/setup.tra~    // tra file containing only strings for WeiDU's install process. 
 
-LANGUAGE ~English~ ~English~ ~Erevain/English/Setup-Erevain.tra~ // This is an example line for English language. If you want, you can also use Translations/English folder
+
+AUTO_TRA ~Erevain/Languages/%s~ // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
+
+LANGUAGE ~English~ ~English~ ~Erevain/Languages/English/Setup-Erevain.tra~ // This is an example line for English language. If you want, you can also use Translations/English folder
 
 BEGIN ~Erevain Blacksheaf NPC mod for BG2 and IWD~ // This is the name of your mod.
 
