@@ -1,5 +1,5 @@
 BACKUP ~Erevain/Backup~ 
-AUTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation error, he'll know where to post his bug reports
+AUTHOR ~Bill Bisco, a.k.a. Bill Bisco, at billbisco@gmail.com~ // If the player gets an installation error, s/he will know where to post his/her bug reports
 
 ALWAYS // Anything in this block will execute for every component.
   ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN  // This ALWAYS/ACTION_IF combo will convert charsets for use on EE games.  You can delete this entire ALWAYS or ACTION_IF block if your mod can not be installed on an EE game. Also delete the lib and translations/iconv folders. 
