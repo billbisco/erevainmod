@@ -1,6 +1,5 @@
-
 BACKUP ~Erevain/Backup~ 
-UTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation error, he'll know where to post his bug reports
+AUTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation error, he'll know where to post his bug reports
 
 ALWAYS // Anything in this block will execute for every component.
   ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN  // This ALWAYS/ACTION_IF combo will convert charsets for use on EE games.  You can delete this entire ALWAYS or ACTION_IF block if your mod can not be installed on an EE game. Also delete the lib and translations/iconv folders. 
@@ -14,19 +13,14 @@ END
 VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will++************************
 // If you choose to not use an HTML readme, you can delete the g3readme.css from the style folder.
 
-AUTO_TRA ~real_mod/languages/%s~ //~%~
+AUTO_TRA ~Erevain/languages/%s~ //~%~  // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
 
 LANGUAGE
   ~English~ // Name as displayed in WeiDU's language menu
-  ~english~ // Name of folder actually containing tra files.
-  ~real_mod/languages/english/real_mod.tra~ // tra file containing game content strings.
-  ~real_mod/languages/english/setup.tra~    // tra file containing only strings for WeiDU's install process. 
-
-
-AUTO_TRA ~Erevain/Languages/%s~ // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
-
-LANGUAGE ~English~ ~English~ ~Erevain/Languages/English/Setup-Erevain.tra~ // This is an example line for English language. If you want, you can also use Translations/English folder
-
+  ~English~ // Name of folder actually containing tra files.
+  ~Erevain/Languages/English/Erevain-Content.tra~ // tra file containing game content strings.
+  ~Erevain/Languages/English/Setup-Erevain.tra~    // tra file containing only strings for WeiDU's install process. 
+  
 BEGIN ~Erevain Blacksheaf NPC mod for BG2 and IWD~ // This is the name of your mod.
 
 /* 
@@ -88,8 +82,8 @@ Advantages:
 Disadvantages:
 - Gets only 15 points to distribute thieving points per level.~
 
-// change regular spell to innate.  Below Macro is from Divine Remix Authors: Andyr, CamDawg and NiGHTMARE.  Thank you and Mike1072 for the hint!
-DEFINE_PATCH_MACRO ~spell_to_innate~ BEGIN
+DEFINE_PATCH_MACRO ~spell_to_innate~ // change regular spell to innate.  Macro is from Divine Remix Authors: Andyr, CamDawg and NiGHTMARE.  Thank you and Mike1072 for the hint!
+BEGIN
   READ_LONG  0x64 "abil_off" ELSE 0
   READ_SHORT 0x68 "abil_num" ELSE 0
   READ_ASCII ("%abil_off%" + 0x04) "bam" (8) // reads the bam filename from ability
@@ -127,9 +121,7 @@ COPY ~mymod/fighter.cre~ ~override/fighter.cre~
   WRITE_SHORT   0x246 0x4000 + ~%Infiltrator%~
 */
 
-//EE compatibility using the fl#add_kit_ee.tpa file in the mod folder
-INCLUDE ~erevain/kits/infiltrator/fl#add_kit_ee.tpa~
-
+INCLUDE ~erevain/kits/infiltrator/fl#add_kit_ee.tpa~ //EE compatibility using the fl#add_kit_ee.tpa file in the mod folder
 LAF fl#add_kit_ee
    STR_VAR
      kit_name = Infiltrator
@@ -140,14 +132,13 @@ END
 // 200 Install Character
 
 ACTION_IF (FILE_EXISTS_IN_GAME ~erevain.cre~) BEGIN
-  COPY_EXISTING ~Erevain.cre~ ~override~  //Erevain CRE exists
+  COPY_EXISTING ~Erevain.cre~ ~override~  //  Copy Erevain CRE from existing game to override if it exists
 END
 ELSE BEGIN
-  COPY ~Erevain/Characters/Erevain.cre~ ~override~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
-  // erevain doesn't exist so we copy it
+  COPY ~Erevain/Characters/Erevain.cre~ ~override~ // Copy original Erevain CRE from IWD to the game (from the mod folder) if the game does no have the Erevain Cre.
 END
 
-SAY NAME1 ~Erevain~
+SAY NAME1 ~Erevain~  // Edit(patch) Erevain.cre with adjusted mod content.
 SAY NAME2 ~Erevain~
 SAY MORALE ~I must hide! Now!~
 SAY HAPPY ~I have grown quite fond of this company.~
