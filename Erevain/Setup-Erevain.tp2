@@ -6,15 +6,13 @@ ALWAYS // Anything in this block will execute for every component.
     OUTER_SET cd_always = 1   // This ACTION_IF and the OUTER_SET following ensure this block only executes once per install, no matter how may components are selected.
     ACTION_DEFINE_ARRAY cdnoconvert BEGIN setup END // List of tra files that contain ONLY strings for the WeiDU installer and NOT game content
     ACTION_DEFINE_ARRAY cdreload BEGIN real_mod END // List of tra files that need to be reloaded after conversion because they were previously loaded in the LANGUAGE section
-    LAF HANDLE_CHARSETS INT_VAR infer_charset = 1 STR_VAR tra_path = EVAL ~%MOD_FOLDER%/languages~ noconvert_array = cdnoconvert reload_array = cdreload  END  // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
+    LAF HANDLE_CHARSETS INT_VAR infer_charset = 1 STR_VAR tra_path = EVAL ~%MOD_FOLDER%/Languages~ noconvert_array = cdnoconvert reload_array = cdreload  END  // On EE games, convert game content tra files to utf-8 so that games don't crash when encountering international characters.
   END
   // If you do have stuff you want to execute for every component, put it here.
 END
-VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will++************************
-// If you choose to not use an HTML readme, you can delete the g3readme.css from the style folder.
 
-AUTO_TRA ~Erevain/languages/%s~ //~%~  // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
-
+VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will know which version a player with a bug report has installed. V4, v1alpha, v1.23 will work too.
+AUTO_TRA ~Erevain/Languages/%s~ //~%~  // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
 LANGUAGE
   ~English~ // Name as displayed in WeiDU's language menu
   ~English~ // Name of folder actually containing tra files.
@@ -23,64 +21,44 @@ LANGUAGE
   
 BEGIN ~Erevain Blacksheaf NPC mod for BG2 and IWD~ // This is the name of your mod.
 
-/* 
-TABLE OF CONTENTS
 
-100 INSTALL KIT
-200 INSTALL CHARACTER
-
-*/
+/* TABLE OF CONTENTS
+	100 INSTALL KIT
+	200 INSTALL CHARACTER  */
 
 // 100 INSTALL KIT
 
 ADD_KIT ~Infiltrator~ //Infiltrator, in this example, is the internal name of the kit as it will be referred to in the game files. The internal name you specify here will need to be consistent throughout the rest of the ADD_KIT command.
-
-  // appended to CLASWEAP.2da
-  ~Infiltrator                1           1           1           1           1           0           0           0~
-  // appended column-wise to WEAPPROF.2da
-  ~Infiltrator 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
-  // appended to ABCLASRQ.2da
-  ~Infiltrator                0       9       0       0       0       0~
-  // appended to ABCLSMOD.2da
-  ~Infiltrator                0       0       0       0       0       0~
-  // appended to ABDCDSRQ.2da
-  ~Infiltrator                0       17       0       0       0      0~
-  // appended to ABDCSCRQ.2da
-  ~Infiltrator                0       15       0       0       0      0~
-  // appended to ALIGNMNT.2da
-  ~Infiltrator                0       1       1       1       1       1       1       1       1~
-  // appended to DUALCLAS.2da
-  ~Infiltrator                1       1       1       0       0       0~
-/* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
-~erevain/kits/infiltrator/clabbi01.2da~
-/* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
-~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
-/* This is the "unusable" value you want for you kit and also the class value. These would normally appear at the end of KITLIST.2DA */
-~0x00040000 4 ~
-/* This is the High Level Ability Abbreviation (see LUABBR.2DA).  Normal values are Fi0, Pa0, etc. */
-~Th0~
-/* This is the TOB starting equipment list. Put a * if you don't want something. See 25STWEAP.2DA. */
-~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
-/* These are the strings you want for the lower, mixed and help
- * descriptions for your kit. */
-SAY ~ infiltrator~ 
-SAY ~Infiltrator~
-SAY ~INFILTRATOR: The master of stealth and invading unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in thieving aptitude.
-
-Advantages:
-- Access to several innate abilities, which grow in frequency and availability as levels advance:
-1. Luck (2 uses at level 2)
-2. Non-Detection (2 uses at level 3)
-3. Knock (2 uses at level 4, 1 additional use at levels 7,10,16,22,28,34,40)
-4. Invisibility (2 uses at level 5)
-5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36)
-6. Improved Invisibility (at level 8)
-7. Dimension Door (at level 11,17,23,29,35)
-8. Farsight (at level 9,15,21,27,33,39)
-9. True Sight (at level 13, 19, 25, 31, 37)
-10. Mass Invisibility (at level 14,20,26,32,38)
-Disadvantages:
-- Gets only 15 points to distribute thieving points per level.~
+  ~Infiltrator                1           1           1           1           1           0           0           0~   // appended to CLASWEAP.2da
+  ~Infiltrator 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~  // appended column-wise to WEAPPROF.2da
+  ~Infiltrator                0       9       0       0       0       0~  // appended to ABCLASRQ.2da
+  ~Infiltrator                0       0       0       0       0       0~  // appended to ABCLSMOD.2da
+  ~Infiltrator                0       17       0       0       0      0~  // appended to ABDCDSRQ.2da
+  ~Infiltrator                0       15       0       0       0      0~  // appended to ABDCSCRQ.2da
+  ~Infiltrator                0       1       1       1       1       1       1       1       1~    // appended to ALIGNMNT.2da
+  ~Infiltrator                1       1       1       0       0       0~   // appended to DUALCLAS.2da
+  ~Erevain/Kits/Infiltrator/clabbi01.2da~  // this is the name of your abilities 2DA file, in the style of clabrn02.2da
+  ~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~  // These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like.
+  ~0x00040000 4 ~  // This is the "unusable" value you want for you kit and also the class value. These would normally appear at the end of KITLIST.2DA
+  ~Th0~  // This is the High Level Ability Abbreviation (see LUABBR.2DA).  Normal values are Fi0, Pa0, etc.
+  ~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~  // This is the TOB starting equipment list. Put a * if you don't want something. See 25STWEAP.2DA.
+  SAY ~infiltrator~  These are the strings you want for the lower, mixed and help descriptions for the kit
+  SAY ~Infiltrator~
+  SAY ~INFILTRATOR: The master of stealth and invading unknown places: urban or wilderness. These rogues use their magical abilities to supplement their thieving skills at the price of reduced progress in thieving aptitude.
+	Advantages:
+	- Access to several innate abilities, which grow in frequency and availability as levels advance:
+	1. Luck (2 uses at level 2)
+	2. Non-Detection (2 uses at level 3)
+	3. Knock (2 uses at level 4, 1 additional use at levels 7,10,16,22,28,34,40)
+	4. Invisibility (2 uses at level 5)
+	5. Find Traps (2 uses at level 6, 1 additional use at levels 12,18,24,30,36)
+	6. Improved Invisibility (at level 8)
+	7. Dimension Door (at level 11,17,23,29,35)
+	8. Farsight (at level 9,15,21,27,33,39)
+	9. True Sight (at level 13, 19, 25, 31, 37)
+	10. Mass Invisibility (at level 14,20,26,32,38)
+	Disadvantages:
+	- Gets only 15 points to distribute thieving points per level.~
 
 DEFINE_PATCH_MACRO ~spell_to_innate~ // change regular spell to innate.  Macro is from Divine Remix Authors: Andyr, CamDawg and NiGHTMARE.  Thank you and Mike1072 for the hint!
 BEGIN
@@ -113,21 +91,12 @@ COPY_EXISTING ~SPWI209.spl~ ~override/BIIN01.spl~ // Luck
               ~SPWI721.spl~ ~override/BIIN10.spl~ // Mass Invisibility
   LAUNCH_PATCH_MACRO ~spell_to_innate~ // Takes all of the copied and renamed spells above and runs the earlier defined macro
 
-/* This snippet shows how to use the kit number as a variable name to
- * assign this kit to a creature. The "0" and the "0x4000" are necessary. 
- * These offsets should be the same for all CREs. 
-COPY ~mymod/fighter.cre~ ~override/fighter.cre~ 
-  WRITE_SHORT   0x244 0
-  WRITE_SHORT   0x246 0x4000 + ~%Infiltrator%~
-*/
-
 INCLUDE ~erevain/kits/infiltrator/fl#add_kit_ee.tpa~ //EE compatibility using the fl#add_kit_ee.tpa file in the mod folder
 LAF fl#add_kit_ee
    STR_VAR
      kit_name = Infiltrator
     thiefskl = ~30 15~
 END
-
 
 // 200 Install Character
 
@@ -365,3 +334,11 @@ CREATE CRE Erevain // Cre File format found at http://gibberlings3.net/iesdp/fil
   /* ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 identified weapon EQUIP
 / WRITE_LONG  0x028 0x6300//   Animation
 / WRITE_ASCII 0x2cc ~BILLB~ #8 // Dialog */
+
+/* This snippet shows how to use the kit number as a variable name to
+ * assign this kit to a creature. The "0" and the "0x4000" are necessary. 
+ * These offsets should be the same for all CREs. 
+COPY ~mymod/fighter.cre~ ~override/fighter.cre~ 
+  WRITE_SHORT   0x244 0
+  WRITE_SHORT   0x246 0x4000 + ~%Infiltrator%~
+*/
