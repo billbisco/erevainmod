@@ -256,7 +256,7 @@ Erevain asks Imoen if she ever got to visit beautiful places as a child. Imoen r
 
 Erevain: Imoen, did you ever manage to visit beautiful places as a young one? Ever get out of that dusty Candlekeep?
 Imoen: <CHARNAME> and I rarely got out. We were always chastised that we wouldn't be allowed back inside if we left the walls. I think that was more to scare us than anything. But, there were a few times we got to see outside. When I did, I always wanted to visit the beautiful forests and all of the life they had to show.
-Erevain: That reminds me of my home of Evereska. Imoen, we had the most beautiful forests in all of Faer鹡. ReEvery tenday I would travel up and down each tree reciting each one's name: Agala, Einid, Ogainithyn, Illesmyin, Nintomyan, Erevain, and so on.
+Erevain: That reminds me of my home of Evereska. Imoen, we had the most beautiful forests in all of Faer没n. ReEvery tenday I would travel up and down each tree reciting each one's name: Agala, Einid, Ogainithyn, Illesmyin, Nintomyan, Erevain, and so on.
 Imoen: Erevain? Really? Did your parents name you after a big stick with greens? What came first, you or the tree?
 Erevain: The tree. An ancient exquisite Duskwood that has been growing for centuries prior to my birth. Such namings are not uncommon amongst the elves.
 Imoen: So does every coffee mug, every weed, and that pebble over their have names too?
@@ -903,7 +903,7 @@ Erevain asks Shar-Teel about her heritage. Shar-Teel tells Erevain to ask someon
 
 Erevain: Tell me of your heritage Shar-teel. You came from Baldur's Gate, yes?
 Shar-Teel: Ask someone else Erevain. I do not talk to poor male elflings.
-Erevain: Rude amazons don't have much clout in greater Faer鹡. I am sure that everyone else tires of hearing your rubbish threats.
+Erevain: Rude amazons don't have much clout in greater Faer没n. I am sure that everyone else tires of hearing your rubbish threats.
 Shar-Teel: Keep your pathetic elfling mouth shut or I'll cut it out of you, <CHARNAME> willing or not.
 Shar-Teel: I would skewer my own family for such words, much less so an imbecile as you.
 
@@ -1017,7 +1017,7 @@ Accalia: (glares at Erevain). The weapons are blunted and precautions are made t
 Erevain: I suppose that sounds like fun, but you couldn't play as any famous female warrior or heroine?
 Accalia: The boy who was supposed to portray Tempus hurt his back and we needed a quick replacement. Since I was about the same stature, they chose me for the role. Tempus has never been known to speak directly on Faerun. So, the role was silent which also suited me well.
 Erevain: That's nice, but I still think that it's a shame that your "fun" had to involve you becoming a man.
-Accalia: It is a great honor to portray Tempus. Tempus is the most sublime heroic deities that Faer鹡 who has armed and defended these lands for hundreds of years. I would gladly become Tempus, man or not and am honored to have him as my deity.
+Accalia: It is a great honor to portray Tempus. Tempus is the most sublime heroic deities that Faer没n who has armed and defended these lands for hundreds of years. I would gladly become Tempus, man or not and am honored to have him as my deity.
 Erevain: And you thought that you weren't favored? It seems that Tempus is equally fortunate to have such a devoted priestess as you.
 Accalia: (laughs). You are right Erevain. I should be more mindful of Tempus's blessings.
 Erevain: Absolutely, afterall, he brought us together with Hrothgar and CHARNAME. I'm sure we'll find even greater glories that you can pen in Tempus's honor
@@ -1304,7 +1304,7 @@ IF ~~ THEN REPLY ~Why do you ask such stupid questions Erevain? Traveling is a n
 END
 
 IF ~~ THEN BEGIN CHErevain1
-SAY ~It is exhilarating isn't it? To travel Faer鹡 and see such sights and places is absolutely thrilling!~
+SAY ~It is exhilarating isn't it? To travel Faer没n and see such sights and places is absolutely thrilling!~
 IF ~~ THEN REPLY ~I agree. Spending my whole life in Candlekeep hearing stories of faraway places and never being able to see them for myself, left me with a sense of wanderlust. ~ GOTO CHErevain5
 IF ~~ THEN REPLY ~Yes it is. I never imagined the amazing wonders available to see and experience.~ GOTO CHErevain5
 IF ~~ THEN REPLY ~Some of the sights are beautiful; some are terrifying.~ GOTO CHErevain6
@@ -1378,7 +1378,7 @@ SAY ~I apologize....I just cannot talk now.~
 IF ~~ THEN EXIT
 END
 
-//1. Erevain: I certainly don't. All the lands of Faer鹡 are a treasure to be opened. Don't you think?
+//1. Erevain: I certainly don't. All the lands of Faer没n are a treasure to be opened. Don't you think?
 //A. Yes, discovering new places and peoples, even if frightening sometimes is an thrilling experience that has no substitute.
 //B. Some places maybe. Others are just 1 step removed from the Gray Waste.
 //C. Not really. A lot of these places are dangerous and scary.
@@ -1453,7 +1453,7 @@ END
 
 
 IF ~~ THEN BEGIN CH2Erevain8
-SAY ~That's ridiculous. Labelas Enoreth would never allow such a thing to one such as you. Traveling to the past would do great harm to Faer鹡.~
+SAY ~That's ridiculous. Labelas Enoreth would never allow such a thing to one such as you. Traveling to the past would do great harm to Faer没n.~
 IF ~~ THEN REPLY ~You're right. I'm just a crazed <RACE> speaking nonsense.~ GOTO CH2Erevain9
 IF ~~ THEN REPLY ~Well. It's true, harmful or not, and now I need to return home to my time.~ GOTO CH2Erevain10
 IF ~~ THEN REPLY ~Hah. That was a good joke. You enjoyed it Erevain?~ GOTO CH2Erevain9
@@ -1472,14 +1472,14 @@ IF ~~ THEN REPLY ~You are welcome to try. Let's continue to find a way back to m
 END
 
 IF ~~ THEN BEGIN CH2Erevain11
-SAY ~<CHARNAME>, you understand the import of my words. Altering the timeline can cause unforseen consequences and untold ruin upon Faer鹡 and beyond. You must allow me to counsel you until your return to your own time.~
+SAY ~<CHARNAME>, you understand the import of my words. Altering the timeline can cause unforseen consequences and untold ruin upon Faer没n and beyond. You must allow me to counsel you until your return to your own time.~
 IF ~~ THEN REPLY ~I'll do nothing of the sort, and if you try to stop me, you shall suffer my blade.~ GOTO CH2Erevain12
 IF ~~ THEN REPLY ~You are correct Erevian. Come, let us continue on in these strange lands until we can find a way back to my home time. ~ EXIT
 END
 
 
 IF ~~ THEN BEGIN CH2Erevain12
-SAY ~You are a severe threat to all of Faer鹡, <CHARNAME>. By the aid of the Seldarine you shall fall on this day!~
+SAY ~You are a severe threat to all of Faer没n, <CHARNAME>. By the aid of the Seldarine you shall fall on this day!~
 IF ~~ THEN DO ~LeaveParty() Enemy()~ EXIT
 END
 
@@ -1536,7 +1536,7 @@ END
 IF ~~ THEN BEGIN CH3Erevain2
 SAY ~And risk burning the forest, the jungle or nature? Such risks are not worth the danger!~
 IF ~~ THEN REPLY ~Surely, with magic so prevalent in Elven cities, such fire extinguishing magic should be quite easily available no?~ GOTO CH3Erevain3
-IF ~~ THEN REPLY ~You're absolutely right. If the risk of accidental torching or arson is too great. Fires should be banned by the peoples of Faer鹡.~ GOTO CH3Erevain5
+IF ~~ THEN REPLY ~You're absolutely right. If the risk of accidental torching or arson is too great. Fires should be banned by the peoples of Faer没n.~ GOTO CH3Erevain5
 IF ~~ THEN REPLY ~Huge metropolises burn fires every day without these massive fears you promote.~ GOTO CH3Erevain6
 IF ~~ THEN REPLY ~I'm not really interested in discussing elven propaganda.~ GOTO CH3Erevain7
 END
@@ -1555,7 +1555,7 @@ SAY ~(Grr) Elven cities are quite safe! If you get to visit one someday you will
 END
 
 IF ~~ THEN BEGIN CH3Erevain5
-SAY ~Absolutely <CHARNAME>. It is best to remove such hazards completely. The other races across Faer鹡 would be best by following the elven example. Let us be off.~ EXIT
+SAY ~Absolutely <CHARNAME>. It is best to remove such hazards completely. The other races across Faer没n would be best by following the elven example. Let us be off.~ EXIT
 END
 
 IF ~~ THEN BEGIN CH3Erevain6
@@ -1569,7 +1569,7 @@ END
 
 
 IF ~~ THEN BEGIN CH3Erevain8
-SAY ~Should we ever visit my beloved Evereska; I will share these magics with you. Perhaps you too shall share them with others and in such ways all of Faer鹡 may be made safer. You will readily glimpse the power of elven magic over mundane trinkets~
+SAY ~Should we ever visit my beloved Evereska; I will share these magics with you. Perhaps you too shall share them with others and in such ways all of Faer没n may be made safer. You will readily glimpse the power of elven magic over mundane trinkets~
 IF ~~ THEN REPLY ~I would love to visit that land with you Erevain.~ GOTO CH3Erevain9
 IF ~~ THEN REPLY ~Evereska might be an interesting place to visit if the opportunity to present itself.~ GOTO CH3Erevain9
 IF ~I have no interest in visiting an entire region of uptight haughty elves.~ THEN REPLY ~~ GOTO CH3Erevain7
@@ -1624,7 +1624,7 @@ IF ~~ THEN REPLY ~How did you end up joining all three organizations?~ GOTO CH4E
 IF ~~ THEN REPLY ~Erevain, can we talk about this later?~ GOTO CH4Erevain100
 
 IF ~~ THEN BEGIN CH4Erevain20
-SAY ~The Swords of Evereska are an order of knights, paladins, and wizards. They defend the Evereskan hills along with the Vale Guard on occasion while sending out parties in the interests of Evereska and the greater good of Faer鹡. Sometimes they aid the Greycloaks and their collectors in their quests.~
+SAY ~The Swords of Evereska are an order of knights, paladins, and wizards. They defend the Evereskan hills along with the Vale Guard on occasion while sending out parties in the interests of Evereska and the greater good of Faer没n. Sometimes they aid the Greycloaks and their collectors in their quests.~
 IF ~~ THEN REPLY ~How did you end up joining the Swords of Evereska?~ GOTO CH4Erevain30
 IF ~~ THEN REPLY ~Who are the Vale Guard?~ GOTO CH4Erevain40
 IF ~~ THEN REPLY ~Who are the Greycloaks?~ GOTO CH4Erevain60
@@ -1752,7 +1752,7 @@ IF ~~ THEN REPLY ~If your comrades couldn't defend themselves, then that's their
 END
 
 IF ~~ THEN BEGIN CH5Erevain90
-SAY ~Evereska is one of the last elven fortresses on the main continent of Faer鹡. We are judged not only by our actions, but on their effect on the elven civilization itself. My kind's numbers are dwindling. To have any part in their further decrease is unforgivable. I was as responsible for the lives of those Vale Guards and Yalatheniel as I am my own. If I did not leave of my own accord, my people and family would have assuredly rejected me. Now I must content myself to drift from location to location, stranger to stranger, and try to extract some meaning for my continued existence.~
+SAY ~Evereska is one of the last elven fortresses on the main continent of Faer没n. We are judged not only by our actions, but on their effect on the elven civilization itself. My kind's numbers are dwindling. To have any part in their further decrease is unforgivable. I was as responsible for the lives of those Vale Guards and Yalatheniel as I am my own. If I did not leave of my own accord, my people and family would have assuredly rejected me. Now I must content myself to drift from location to location, stranger to stranger, and try to extract some meaning for my continued existence.~
 IF ~~ THEN REPLY ~Aiding me and others, and making the world a better place is a worthy existence.~ GOTO CH5Erevain100
 IF ~~ THEN REPLY ~Aiding me while exploring unknown lands and gaining knowledge is a worthy existence. ~ GOTO CH5Erevain100
 IF ~~ THEN REPLY ~Aiding me while gaining power and funds to vanquish your enemies is a worthy existence. ~ GOTO CH5Erevain100
@@ -2542,7 +2542,7 @@ EXTEND_BOTTOM DEREVAIN 1
 ++ ~Twenty years ago? You've been adventuring this whole time?~ + GOTO mod_ErevainA1
 
 EXTEND_BOTTOM DEREVAIN 2
-++ ~Explore the world? You must have been exploring Faer鹡 for a long time to get so far up North. ~ + GOTO mod_ErevainA1
+++ ~Explore the world? You must have been exploring Faer没n for a long time to get so far up North. ~ + GOTO mod_ErevainA1
 
 EXTEND_BOTTOM DEREVAIN 3
 ++ ~Where is your homeland? Where do you hail from? ~ + GOTO mod_ErevainA3
@@ -3032,11 +3032,11 @@ Erevain: I thought you an ally Yoshimo. Yet this entire time you deceived all of
 16.2130 Outline
 16.2130 Content
 
-After twenty years of travels away from home, Erevain finally returned to his home in Evereska. Erevain warmly embraced friends and family not seen in decades. Here he proudly introduced his famous wife, <CHARNAME>. The Blacksheaf clan was impressed with <CHARNAME>'s deeds and heroism, but behind closed doors expressed that they couldn't help but be disappointed by Erevain's choice of a N-Tel-Quess spouse, further diluting the family bloodline and contributing to the increasing scarcity of elves across Faer鹡.
+After twenty years of travels away from home, Erevain finally returned to his home in Evereska. Erevain warmly embraced friends and family not seen in decades. Here he proudly introduced his famous wife, <CHARNAME>. The Blacksheaf clan was impressed with <CHARNAME>'s deeds and heroism, but behind closed doors expressed that they couldn't help but be disappointed by Erevain's choice of a N-Tel-Quess spouse, further diluting the family bloodline and contributing to the increasing scarcity of elves across Faer没n.
 
 Unbeknownst to <CHARNAME>, Erevain challenged his own clan and vigorously defended his spousal selection. Erevain's pleads were disregarded and his clan's opinion remained firm. Rejected a second time, Erevain left Evereska with <CHARNAME> and continued to adventure for a time before settling for a simpler life in Calimshan. News of <CHARNAME>'s pregnancy wavered Erevain's resolve and the birth of their child broke it completely.
 
-Unable to bear the living humiliation of disappointing his family again, Erevain abandoned <CHARNAME> and their infant daughter. Without a word, Erevain left to wander the outskirts of Faer鹡, the foreign lands of Zakhara and Kara-Tur, and later the outer planes themselves. Forever ashamed of his actions towards his family and to <CHARNAME>, Erevain drifted for centuries. Eventually, Erevain disappeared entirely and the name "Erevain Blacksheaf" was lost from memory.
+Unable to bear the living humiliation of disappointing his family again, Erevain abandoned <CHARNAME> and their infant daughter. Without a word, Erevain left to wander the outskirts of Faer没n, the foreign lands of Zakhara and Kara-Tur, and later the outer planes themselves. Forever ashamed of his actions towards his family and to <CHARNAME>, Erevain drifted for centuries. Eventually, Erevain disappeared entirely and the name "Erevain Blacksheaf" was lost from memory.
 
 
 ----------------
@@ -3136,7 +3136,7 @@ SAY SET_A_TRAP ~A token of my genius.~
 SAY HIDDEN_IN_SHADOWS ~One with the shadows.~
 SAY PICKED_POCKET ~I only take what I must.~
 
-SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faer鹡. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
+SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faer没n. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
 
 --------------------------------------
 19. Infiltrator Kit Description
@@ -3206,7 +3206,7 @@ Move Silently -25%
 
 This sword, an oddity amonst elves who normally prefer lighter blades, The original Greycloak owner passed this owneron after years of service.Kethryllia Amaranthine reforged this sword 1221 DR for Erevain Blacksheaf's initiation to the Evereskan Greycloaks. It has since been redecorated and openly displays the Black sheaf family crest. Erevain requested this sword be heavier and more damaging
 
-This broad sword used to belong to Erevain Blacksheaf, a wandering elf from Evereska. It was made in 1221 DR by Evereskan Greycloaks. Erevain憇 sword is unusual among elves, who normally favor lighter swords.
+This broad sword used to belong to Erevain Blacksheaf, a wandering elf from Evereska. It was made in 1221 DR by Evereskan Greycloaks. Erevain聭s sword is unusual among elves, who normally favor lighter swords.
 
 STATISTICS:
 
@@ -3227,7 +3227,7 @@ Cleric
 // +3 Sword instead of +2
 // Changed Item Description as item can now be gained with Erevain no longer deceased.
 // Old description is "This broad sword used to belong to Erevain Blacksheaf, a wandering elf from Evereska.
-// It was made in 1221 DR by Evereskan Greycloaks. Erevain憇 sword was unusual among his people, who normally
+// It was made in 1221 DR by Evereskan Greycloaks. Erevain聭s sword was unusual among his people, who normally
 // favor lighter swords."
 // All other characteristics not changed should be the same as the original.
 
