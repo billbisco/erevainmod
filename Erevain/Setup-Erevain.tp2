@@ -176,9 +176,9 @@ WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erev
 // WRITE_ASCII 0x3c  ~BRANWEM~ #8  // medium portrait
 
 COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
-	~Erevain/Dialogues/BIBEre.d~ // All Erevain's banters with other party members will go here.
-	~Erevain/Dialogues/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
-	~Erevain/Dialogues/BIEreP.d~ // Erevain's leaving party dialogue will go here.
+//	~Erevain/Dialogues/BIBEre.d~ // All Erevain's banters with other party members will go here.
+//	~Erevain/Dialogues/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
+//	~Erevain/Dialogues/BIEreP.d~ // Erevain's leaving party dialogue will go here.
 //	~Erevain/Scripts/BIEreS.baf~ // Erevain's script.
 //	~Erevain/Scripts/BIEreD.baf~ // Erevain's dream script for events at rest. If you want your NPC to talk to you at rest, add scripting here.
 //	~Erevain/Scripts/BIEreF.baf~ // Erevain's "fixing" script. Remember how various modders advised you to "select your NPC and press K"? Well, that's how they do it.
