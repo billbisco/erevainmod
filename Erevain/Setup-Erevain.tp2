@@ -3,7 +3,7 @@ AUTHOR ~Bill Bisco at billbisco@gmail.com~ // If the player gets an installation
 VERSION ~v0.0001~  // This is not necessary, but recommended. A version number will be reflected in your Weidu.log. This way you will know which version a player with a bug report has installed. V4, v1alpha, v1.23 will work too.
 AUTO_TRA ~Erevain/%s~ // This is translation support. It means that your mod will eventually have directories like MyMod/French, MyMod/Italian and MyMod/Polish, and this line will tell the compiler where to look.
 LANGUAGE ~English~ ~English~ ~Erevain/Languages/English/Setup-Erevain.tra~ // This is an example line for English language. If you want, you can also use Translations/English folder
-BEGIN ~Erevain Blacksheaf NPC mod for BG2 and IWD~ // This is the name of your mod.
+BEGIN ~Erevain Blacksheaf NPC mod for BG2, NEJ, and IWD~ // This is the name of your mod.
 
 /* 
 TABLE OF CONTENTS
