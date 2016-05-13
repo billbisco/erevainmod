@@ -100,10 +100,10 @@ LAF fl#add_kit_ee
 END
 
 // 200 Install Character
-
-ACTION_IF !FILE_EXISTS_IN_GAME ~erevain.cre~ BEGIN  // This Code ensures that the Erevain Cre is inserted either from Mod folder or used from the existing game
+/*
+ACTION_IF !FILE_EXISTS_IN_GAME ~Erevain.cre~ BEGIN  // This Code ensures that the Erevain Cre is inserted either from Mod folder or used from the existing game
   COPY ~Erevain/Characters/Erevain.cre~ ~override~  // I dont want to copy from the mod folder if the CRE already exists.  This allows other mods to edit beforehand.
-END
+END */
 COPY_EXISTING ~erevain.cre~ ~override~
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
