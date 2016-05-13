@@ -164,25 +164,23 @@ SAY HIDDEN_IN_SHADOWS ~One with the shadows.~
 SAY PICKED_POCKET ~I only take what I must.~
 SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
 
-COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
-
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
-// WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erevain in the game, we'll call him BIEre. For example, InParty("BIEre") means that Erevain is in party.
+  WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erevain in the game, we'll call him BIEre. For example, InParty("BIEre") means that Erevain is in party.
 // WRITE_ASCII 0X34  ~BRANWES~ #8  // small portrait
 // WRITE_ASCII 0x3c  ~BRANWEM~ #8  // medium portrait
-// COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
-//	~Erevain/Dialogues/BIBEre.d~ // All Erevain's banters with other party members will go here.
-//	~Erevain/Dialogues/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
-//	~Erevain/Dialogues/BIEreP.d~ // Erevain's leaving party dialogue will go here.
-//	~Erevain/Scripts/BIEreS.baf~ // Erevain's script.
-//	~Erevain/Scripts/BIEreD.baf~ // Erevain's dream script for events at rest. If you want your NPC to talk to you at rest, add scripting here.
-//	~Erevain/Scripts/BIEreF.baf~ // Erevain's "fixing" script. Remember how various modders advised you to "select your NPC and press K"? Well, that's how they do it.
+ COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
+	~Erevain/Dialogues/BIBEre.d~ // All Erevain's banters with other party members will go here.
+	~Erevain/Dialogues/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
+	~Erevain/Dialogues/BIEreP.d~ // Erevain's leaving party dialogue will go here.
+	~Erevain/Scripts/BIEreS.baf~ // Erevain's script.
+	~Erevain/Scripts/BIEreD.baf~ // Erevain's dream script for events at rest. If you want your NPC to talk to you at rest, add scripting here.
+	~Erevain/Scripts/BIEreF.baf~ // Erevain's "fixing" script. Remember how various modders advised you to "select your NPC and press K"? Well, that's how they do it.
 
 // These files add Erevain's scripts and dialogue files to the game(except for the banter file, that's below). The first block is for SoA-only installs, the second one is for ToB.
 // Here's the order: death variable, leaving party file, main dialogue file(J for joined), dream script for SoA.
 // Or death variable, leaving party file, main dialogue file(J for joined), dream script for SoA, leaving party file for ToB, main dialogue(J) file for ToB, ToB dream script, ToB main script.
-/*
+
 APPEND ~pdialog.2da~
 ~BIEre        BIEreP             BIEreJ            BIEreD~
 UNLESS ~BIEre~
@@ -204,7 +202,7 @@ APPEND ~interdia.2da~
 ~BIEre       BIBEre       BIBEre25~
 UNLESS ~BIEre~
 IF ~25FILE~ 
-*/
+
 
 // If File Exists Then Do this else do this
 
