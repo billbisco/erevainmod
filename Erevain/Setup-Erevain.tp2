@@ -101,17 +101,10 @@ END
 
 // 200 Install Character
 
-/* 
-ACTION_IF (FILE_EXISTS_IN_GAME ~erevain.cre~) BEGIN
-  COPY_EXISTING ~Erevain.cre~ ~override~  //Erevain CRE exists
+ACTION_IF !FILE_EXISTS_IN_GAME ~erevain.cre~ BEGIN  // This Code ensures that the Erevain Cre is inserted either from Mod folder or used from the existing game
+  COPY ~Erevain/Characters/Erevain.cre~ ~override~  // I dont want to copy from the mod folder if the CRE already exists.  This allows other mods to edit beforehand.
 END
-ELSE BEGIN
-  COPY ~Erevain/Characters/Erevain.cre~ ~override~ // copy our .cre file to the game. Below I edit(patch) Erevain.cre, adding a soundset, a bio, a dialogue file and other nice things.
-  // erevain doesn't exist so we copy it
-END
-*/
-
-COPY_EXISTING ~Erevain.cre~ ~override~  //Assumes Erevain CRE exists
+COPY_EXISTING ~erevain.cre~ ~override~
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
 SAY MORALE ~I must hide! Now!~
