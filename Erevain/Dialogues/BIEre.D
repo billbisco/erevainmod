@@ -102,11 +102,13 @@ IF ~CheckStatLT(Player1, 9, INT)~ THEN REPLY ~Elf's magic very weak and not good
 END
 
 IF ~~ mod_ErevainA7
-SAY ~Very well. I shall consider traveling with your group another adventure in of itself. Come, let us explore onward!~ DO ~JoinParty()~ EXIT
+SAY ~Very well. I shall consider traveling with your group another adventure in of itself. Come, let us explore onward!~
+IF~~THEN DO ~JoinParty()~ EXIT
 END
 
 IF ~~ mod_ErevainA8
-SAY ~Very well. I shall consider traveling with you another adventure in of itself. Come, let us explore onward!~ DO ~JoinParty()~ EXIT
+SAY ~Very well. I shall consider traveling with you another adventure in of itself. Come, let us explore onward!~
+IF~~THEN DO ~JoinParty()~ EXIT
 END
 
 IF ~~ mod_ErevainB1
@@ -122,7 +124,7 @@ END
 
 IF ~NumTimesTalkedToGT(0)
 Global("Erevain_Jerk", "GLOBAL", 2)~ THEN BEGIN mod_ErevainB3 // from:
-SAY ~I don't want to talk to you and I don't want to travel with you. Leave me be, please~ 
+SAY ~I don't want to talk to you and I don't want to travel with you. Leave me be please.~ 
 IF ~~ THEN REPLY ~Fine... goodbye.~ EXIT
 END
 
@@ -134,8 +136,8 @@ IF ~~ THEN REPLY ~We have to work together if we're going to get that big reward
 END
 
 IF ~~ mod_ErevainB5
-SAY ~Alright. Let us journey together. Let us join Hrothgar and begin the expedition. DO ~JoinParty()~ EXIT
-IF ~~ EXIT
+SAY ~Alright. Let us journey together. Let us join Hrothgar and begin the expedition.~
+IF~~THEN DO ~JoinParty()~ EXIT
 END
  
 END // closes the APPEND command
