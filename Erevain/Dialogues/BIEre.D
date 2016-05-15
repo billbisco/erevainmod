@@ -32,7 +32,7 @@ EXTEND_BOTTOM DEREVAIN 10
 END
 
 EXTEND_BOTTOM DEREVAIN 11
-+ ~("Join_Accalia","GLOBAL",1)~ + ~Hrothgar is about to embark on an expedition to Kuldahar to investigate the evil forces plaguing that region. You should join with us.~ +mod_ErevainB1 END
++ ~Global("Join_Accalia","GLOBAL",1)~ + ~Hrothgar is about to embark on an expedition to Kuldahar to investigate the evil forces plaguing that region. You should join with us.~ +mod_ErevainB1 END
 
 EXTEND_BOTTOM DEREVAIN 12
 ++ ~Why won't you join them especially if you might go through that are anyway? We should all travel together there.~ +mod_ErevainA2 END
