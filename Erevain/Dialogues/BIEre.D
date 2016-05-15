@@ -119,7 +119,8 @@ IF ~~ THEN REPLY ~We seem to have gotten off on a bad foot. My apologies Erevain
 END
 
 IF ~~ mod_ErevainB2
-SAY ~I am now very sure that joining your expedition is a faulty notion. Best of luck; I shall not be joining you.~ DO ~SetGlobal("Erevain_Jerk","GLOBAL", 2)~ EXIT
+SAY ~I am now very sure that joining your expedition is a faulty notion. Best of luck; I shall not be joining you.~
+IF~~THEN DO ~SetGlobal("Erevain_Jerk","GLOBAL", 2)~ EXIT
 END
 
 IF ~NumTimesTalkedToGT(0)
