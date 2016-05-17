@@ -52,7 +52,7 @@ IF ~Global("Join_Posse", "GLOBAL", 3) NumInPartyLT(2)~ THEN REPLY ~I'm planning 
 END
 
 IF ~~ mod_ErevainA2
-SAY ~I must respectfully decline. I have been used to adventuring alone for the last twenty years. I often avoid battles by sneaking past hostile creatures and cannot reliabily hide many other indviduals.~ 
+SAY ~I must respectfully decline. I have been used to adventuring alone for a very long time. I often avoid battles by sneaking past hostile creatures and cannot reliabily hide many other indviduals.~ 
 IF ~~ THEN REPLY ~ That's unfortunate. You would have made a great adventuring companion. Oh well. Farewell. ~ EXIT
 IF ~CheckStatLT(Player1, 9, CHR)~ THEN REPLY ~Fine, be mean like that. But, you better at tell us what rumors you know.~ GOTO 9
 IF ~CheckStatGT(Player1, 8, CHR)~ THEN REPLY ~I'm sorry to hear that. Can you at least tell us any rumors you know?~ GOTO 9
@@ -78,7 +78,7 @@ IF ~~ mod_ErevainA4
 SAY ~Oh, I am a fighter and am quite handy with the longsword as well as the longbow. I have simply learned the limits and dangers of fighting solo and seek to avoid unnecessary conflicts~
 IF ~~ THEN REPLY ~Sorry, I don't think you'd be a good fit here. Farewell.~ EXIT
 IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like you can handle a weapon just fine if need be especially given your long tenure adventuring. Please, join us.~ GOTO mod_ErevainA7
-IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like you can handle a weapon just fine if need be especially given your long tenure adventuring. Please, join me.~ GOTO mod_ErevainA8
+IF ~NumInPartyLT(2)~ THEN REPLY ~It sounds like you can handle a weapon just fine if need be especially given your long tenure adventuring. Please, join me.~ GOTO mod_ErevainA8
 IF ~CheckStatGT(Player1, 8, INT)~ THEN REPLY ~I think you're more likely to run up a tree than be of any real help to us. Good riddance.~ DO ~SetGlobal("Erevain_Jerk","GLOBAL", 1)~ EXIT
 IF ~CheckStatLT(Player1, 9, INT)~ THEN REPLY ~If Scared elf not fight then scared elf get eaten. Dumb elf. ~ GOTO 4
 END
@@ -87,7 +87,7 @@ IF ~~ mod_ErevainA5
 SAY ~I prefer to call myself an Infiltrator. I excel in getting to places clandestinely as well as posessing the traditional Thief skills. If I must fight, my strike from the shadows is quite deadly.~ 
 IF ~~ THEN REPLY ~Sorry, I don't think you'd be a good fit here. Farewell.~ EXIT
 IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like you can handle a weapon just fine and offer assistance with your rogue skills. Please, join us.~ GOTO mod_ErevainA7
-IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like you can handle a weapon just fine and offer assistance with your rogue skills. Please, join me.~ GOTO mod_ErevainA8
+IF ~NumInPartyLT(2)~ THEN REPLY ~It sounds like you can handle a weapon just fine and offer assistance with your rogue skills. Please, join me.~ GOTO mod_ErevainA8
 IF ~CheckStatGT(Player1, 8, INT)~ THEN REPLY ~I don't like rogues or any of their ilk. Good riddance.~ DO ~SetGlobal("Erevain_Jerk","GLOBAL", 1)~ EXIT
 IF ~CheckStatLT(Player1, 9, INT)~ THEN REPLY ~Elf not stand and fight. Elf stupid and dumb. ~ GOTO 4
 END
@@ -96,7 +96,7 @@ IF ~~ mod_ErevainA6
 SAY ~Yes, I am a Mage. I have a variety of spells and special abilities that assist me in going invisible or avoiding detection.~ 
 IF ~~ THEN REPLY ~Sorry, I don't think you'd be a good fit here. Farewell.~ EXIT
 IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like your magic and abilities would be most useful. Please, join us.~ GOTO mod_ErevainA7
-IF ~NumInPartyGT(1)~ THEN REPLY ~It sounds like your magic and abilities would be most useful. Please, join me.~ GOTO mod_ErevainA8
+IF ~NumInPartyLT(2)~ THEN REPLY ~It sounds like your magic and abilities would be most useful. Please, join me.~ GOTO mod_ErevainA8
 IF ~CheckStatGT(Player1, 8, INT)~ THEN REPLY ~The last thing I want is a helpless mage adding dead weight. Good riddance.~ DO ~SetGlobal("Erevain_Jerk","GLOBAL", 1)~ EXIT
 IF ~CheckStatLT(Player1, 9, INT)~ THEN REPLY ~Elf's magic very weak and not good. Dumb elf.~ GOTO 4
 END
