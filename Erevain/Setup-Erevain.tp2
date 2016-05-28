@@ -202,6 +202,15 @@ WRITE_BYTE 0x0064 0 // Detect illusion (minimum value: 0) 1 (byte)
     WRITE_LONG 0x02ac  // Spell memorization info entries count 4 (dword)
     WRITE_LONG 0x02b0  // Memorized spells offset 4 (dword)
     WRITE_LONG 0x02b4  // Memorized spells count 4 (dword)    
+SET_BG2_PROFICIENCY
+SET_BG2_PROFICIENCY ~PROFICIENCYSCIMITARWAKISASHININJATO~ 5
+
+
+90 PROFICIENCYLONGSWORD
+
+90 PROFICIENCYLONGSWORD
+104 PROFICIENCYLONGBOW
+113 PROFICIENCYSINGLEWEAPON
 
 
 
