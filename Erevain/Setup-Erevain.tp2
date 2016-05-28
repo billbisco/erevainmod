@@ -194,16 +194,33 @@ WRITE_BYTE 0x023b 15 // Wisdom (1-25) 1 (byte)
 WRITE_BYTE 0x023c 18 // Dexterity (1-25) 1 (byte)
 WRITE_BYTE 0x023d 12 // Constitution (1-25) 1 (byte)
 WRITE_BYTE 0x023e 11 // Charisma (1-25) 1 (byte)
-WRITE_BYTE 0x0273 10 // Class (CLASS.IDS) 1 (byte)
+WRITE_BYTE 0x273 10 // Class (CLASS.IDS) 1 (byte)
+SET_BG2_PROFICIENCY ~PROFICIENCYLONGSWORD~ 2
+SET_BG2_PROFICIENCY ~PROFICIENCYLONGBOW~ 2
+SET_BG2_PROFICIENCY ~PROFICIENCYSINGLEWEAPON~ 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi113~ #0 ~wizard~ // Protection from Evil Level 1
+ADD_KNOWN_SPELL ~spwi112~ #0 ~wizard~ // Magic Missile Level 1
+ADD_KNOWN_SPELL ~spwi110~ #0 ~wizard~ // Identify Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
+
+
+
+
+ADD_MEMORIZED_SPELL ~spwi101~ #0 ~wizard~ ( 2 ) // CRE now has 2 instances of Grease memorized
+
 WRITE_LONG 0x02a0 ~0x2d4~ // Known spells offset 4 (dword)
 WRITE_LONG 0x02a4 19 // Known spells count 4 (dword)
 WRITE_LONG 0x02a8 ~0x3b8~ // Spell memorization info offset 4 (dword)
 WRITE_LONG 0x02ac 17 // Spell memorization info entries count 4 (dword)
 WRITE_LONG 0x02b0 ~0x4c8~ // Memorized spells offset 4 (dword)
 WRITE_LONG 0x02b4 9 // Memorized spells count 4 (dword)    
-SET_BG2_PROFICIENCY ~PROFICIENCYLONGSWORD~ 2
-SET_BG2_PROFICIENCY ~PROFICIENCYLONGBOW~ 2
-SET_BG2_PROFICIENCY ~PROFICIENCYSINGLEWEAPON~ 1
 
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
