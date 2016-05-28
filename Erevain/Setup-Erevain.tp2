@@ -115,9 +115,7 @@ END
 
 COPY ~Erevain/Portraits~ ~override~ // Copy Portraits to override to use them ingame
 
-ACTION_IF !FILE_EXISTS_IN_GAME ~Erevain.cre~ BEGIN // Use our own Erevain CRE if the file not in game, else start with game's file
-  COPY ~Erevain/Characters/Erevain.cre~ ~override~ END
-COPY_EXISTING ~Erevain.cre~ ~override~  
+COPY ~Erevain/Characters/Erevain.cre~ ~override~
 SAY NAME1 ~Erevain~
 SAY NAME2 ~Erevain~
 SAY MORALE ~I must hide! Now!~
@@ -167,12 +165,33 @@ SAY PICKED_POCKET ~I only take what I must.~
 SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
 WRITE_ASCII 0x0034 ~ErevainS~ #8 // Small Portrait (BMP) 8 (resref)
 WRITE_ASCII 0x003c ~ErevainM~ #8 // Medium Portrait (BMP) 8 (resref)
+WRITE_LONG 0x0014 90 // XP Gained for Killing Creature 4 (dword)
+WRITE_LONG 0x0018 3 // Creature Power Level (for summoning spells) / XP of the creature (for party members) 4 (dword)
+WRITE_LONG 0x001c 81 // Gold Carried 4 (dword)
+WRITE_SHORT 0x0024 21 // Current Hit Points 2 (word)
+WRITE_SHORT 0x0026 21 // Maximum Hit Points 2 (word)
+ WRITE_BYTE 0x0044 0 // Reputation (minimum value: 0)  1 (signed byte)
+     WRITE_BYTE 0x0045 0 // Hide in Shadows 1 (byte)
+WRITE_BYTE 0x0052 18 // THAC0 (1-25)  1 (byte)
+    WRITE_BYTE 0x0054 13 // Save versus death (0-20) 1 (byte)
+    WRITE_BYTE 0x0055 15 // Save versus wands (0-20) 1 (byte)
+    WRITE_BYTE 0x0056 14 // Save versus polymorph (0-20) 1 (byte)
+    WRITE_BYTE 0x0057 16 // Save versus breath attacks (0-20) 1 (byte)
+    WRITE_BYTE 0x0058 16 // Save versus spells (0-20) 1 (byte)
+WRITE_BYTE 0x0064 0 // Detect illusion (minimum value: 0) 1 (byte)
+    WRITE_BYTE 0x0065 0 // Set Traps 1 (byte)
+    WRITE_BYTE 0x0066 0 // Lore (0-100)* 1 (byte)
+    WRITE_BYTE 0x0067 0 // Lockpicking (minimum value: 0) 1 (byte)
+    WRITE_BYTE 0x0068 0 // Stealth (minimum value: 0) 1 (byte)
+    WRITE_BYTE 0x0069 0 // Find/disarm traps (minimum value: 0) 1 (byte)
+    WRITE_BYTE 0x006a 0 // Pick pockets (minimum value: 0) 1 (byte)
+
+
+
 
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
   WRITE_ASCII 0x280 ~BIEre~  #32 // death variable - when we want to refer to Erevain in the game, we'll call him BIEre. For example, InParty("BIEre") means that Erevain is in party.
-// WRITE_ASCII 0X34  ~BRANWES~ #8  // small portrait
-// WRITE_ASCII 0x3c  ~BRANWEM~ #8  // medium portrait
  COMPILE ~Erevain/Dialogues/BIEre.d~  // Erevain's greeting dialogue will go here. 
 	~Erevain/Dialogues/BIBEre.d~ // All Erevain's banters with other party members will go here.
 	~Erevain/Dialogues/BIEreJ.d~ // The rest of Erevain's dialogue: his commentary, interjections, talks with the player, lovetalks and everything else.
