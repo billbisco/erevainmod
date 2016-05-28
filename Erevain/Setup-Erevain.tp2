@@ -202,16 +202,17 @@ ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
 ADD_KNOWN_SPELL ~spwi113~ #0 ~wizard~ // Protection from Evil Level 1
 ADD_KNOWN_SPELL ~spwi112~ #0 ~wizard~ // Magic Missile Level 1
 ADD_KNOWN_SPELL ~spwi110~ #0 ~wizard~ // Identify Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Protection from Petrification Level 1
-
-
+ADD_KNOWN_SPELL ~spwi107~ #0 ~wizard~ // Friends Level 1
+ADD_KNOWN_SPELL ~spwi118~ #0 ~wizard~ // Chromatic Orb Level 1
+ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Charm Person Level 1
+ADD_KNOWN_SPELL ~spwi214~ #1 ~wizard~ // Strength Level 2
+ADD_KNOWN_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
+ADD_KNOWN_SPELL ~spwi209~ #1 ~wizard~ // Luck Level 2
+ADD_KNOWN_SPELL ~spwi207~ #1 ~wizard~ // Knock Level 2
+ADD_KNOWN_SPELL ~spwi206~ #1 ~wizard~ // Invisibility Level 2
+ADD_KNOWN_SPELL ~spwi201~ #1 ~wizard~ // Blur Level 2
+ADD_KNOWN_SPELL ~spwi302~ #2 ~wizard~ // Remove Magic Level 3
+ADD_KNOWN_SPELL ~spwi309~ #2 ~wizard~ // Monster Summoning I Level 3
 
 
 ADD_MEMORIZED_SPELL ~spwi101~ #0 ~wizard~ ( 2 ) // CRE now has 2 instances of Grease memorized
