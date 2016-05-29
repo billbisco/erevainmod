@@ -164,12 +164,9 @@ SAY PICKED_POCKET ~I only take what I must.~
 SAY BIO ~When asked about his past, EREVAIN reveals that he left his home of Evereska twenty years ago to explore Faerûn. Most recently, he began his journey to reach the Spine of the world and the region of Icewind Dale. From an early age he expressed aptitude in multiple areas and was encouraged by his mentor Yalatheniel to maintain the discipline to grow competent in all three three of his interests. You get a sense that while he misses his home, he's reluctant to speak much about it. He seems to have some unfinished business there...~
 WRITE_ASCII 0x0034 ~ErevainS~ #8 // Small Portrait (BMP) 8 (resref)
 WRITE_ASCII 0x003c ~ErevainM~ #8 // Medium Portrait (BMP) 8 (resref)
-WRITE_BYTE 0x002c 30 // Metal Color Index 1 (byte)
 WRITE_BYTE 0x002d 66 // Minor Color Index 1 (byte)
 WRITE_BYTE 0x002e 57 // Major Co1or Index 1 (byte)
 WRITE_BYTE 0x002f 17 // Skin Color Index 1 (byte)
-WRITE_BYTE 0x0030 58 // Leather Color Index 1 (byte)
-WRITE_BYTE 0x0031 31 // Armor Color Index 1 (byte)
 WRITE_BYTE 0x0032 25 // Hair Color Index 1 (byte)
 WRITE_LONG 0x0014 90 // XP Gained for Killing Creature 4 (dword)
 WRITE_LONG 0x0018 3 // Creature Power Level (for summoning spells) / XP of the creature (for party members) 4 (dword)
