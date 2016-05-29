@@ -204,7 +204,7 @@ ADD_KNOWN_SPELL ~spwi112~ #0 ~wizard~ // Magic Missile Level 1
 ADD_KNOWN_SPELL ~spwi110~ #0 ~wizard~ // Identify Level 1
 ADD_KNOWN_SPELL ~spwi107~ #0 ~wizard~ // Friends Level 1
 ADD_KNOWN_SPELL ~spwi118~ #0 ~wizard~ // Chromatic Orb Level 1
-ADD_KNOWN_SPELL ~spwi108~ #0 ~wizard~ // Charm Person Level 1
+ADD_KNOWN_SPELL ~spwi104~ #0 ~wizard~ // Charm Person Level 1
 ADD_KNOWN_SPELL ~spwi214~ #1 ~wizard~ // Strength Level 2
 ADD_KNOWN_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
 ADD_KNOWN_SPELL ~spwi209~ #1 ~wizard~ // Luck Level 2
@@ -213,16 +213,16 @@ ADD_KNOWN_SPELL ~spwi206~ #1 ~wizard~ // Invisibility Level 2
 ADD_KNOWN_SPELL ~spwi201~ #1 ~wizard~ // Blur Level 2
 ADD_KNOWN_SPELL ~spwi302~ #2 ~wizard~ // Remove Magic Level 3
 ADD_KNOWN_SPELL ~spwi309~ #2 ~wizard~ // Monster Summoning I Level 3
-
-
-ADD_MEMORIZED_SPELL ~spwi101~ #0 ~wizard~ ( 2 ) // CRE now has 2 instances of Grease memorized
-
-WRITE_LONG 0x02a0 ~0x2d4~ // Known spells offset 4 (dword)
-WRITE_LONG 0x02a4 19 // Known spells count 4 (dword)
-WRITE_LONG 0x02a8 ~0x3b8~ // Spell memorization info offset 4 (dword)
-WRITE_LONG 0x02ac 17 // Spell memorization info entries count 4 (dword)
-WRITE_LONG 0x02b0 ~0x4c8~ // Memorized spells offset 4 (dword)
-WRITE_LONG 0x02b4 9 // Memorized spells count 4 (dword)    
+ADD_KNOWN_SPELL ~spwi307~ #2 ~wizard~ // Invisibility 10' Radius Level 3
+ADD_KNOWN_SPELL ~spwi305~ #2 ~wizard~ // Haste Level 3
+ADD_KNOWN_SPELL ~spwi304~ #2 ~wizard~ // Fireball Level 3
+ADD_MEMORIZED_SPELL ~spwi104~ #0 ~wizard~ // Charm Person Level 1
+ADD_MEMORIZED_SPELL ~spwi113~ #0 ~wizard~ // Protection from Evil Level 1
+ADD_MEMORIZED_SPELL ~spwi112~ #0 ~wizard~ // Magic Missile Level 1
+ADD_MEMORIZED_SPELL ~spwi110~ #0 ~wizard~ // Identify Level 1
+ADD_MEMORIZED_SPELL ~spwi214~ #1 ~wizard~ // Strength Level 2
+ADD_MEMORIZED_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
+ADD_MEMORIZED_SPELL ~spwi305~ #2 ~wizard~ // Haste Level 3
 
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
