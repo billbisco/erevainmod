@@ -9,7 +9,8 @@ BEGIN ~Erevain Blacksheaf NPC mod for BG2, NEJ, and IWD~ // This is the name of 
 TABLE OF CONTENTS
 
 100 INSTALL KIT
-200 INSTALL CHARACTER
+200 INSTALL ITEMS
+300 INSTALL CHARACTER
 
 */
 
@@ -111,7 +112,23 @@ LAF fl#add_kit_ee
     thiefskl = ~30 15~
 END
 
-// 200 Install Character
+// 200 Install Items
+
+COPY_EXISTING chan01.itm ~override/prefix#cha01.itm~ //note that the total file name, excluding file extension, must not exceed 8 characters.
+  SAY NAME1 ~Mail of the Monk~
+  SAY NAME2 ~Mail of the Monk~
+  SAY 0x50 ~Chain Mail so breezy, even Monks can wear it!~ // General description
+  SAY 0x54 ~Chain Mail so breezy, even Monks can wear it!~ // Identified description
+  
+  // COPY ~mymod/myitem.itm~ ~override/myitem.itm~
+  COPY_EXISTING chan19.itm ~override/bichan01.itm~
+  SAY NAME1 ~Erevain's Elven Plate +2~
+  SAY NAME2 ~Erevain's Elven Plate +2~
+  // SAY UNIDENTIFIED_DESC ~Erevain's Elven Plate +2~
+  SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.~
+ // WRITE_LONG 0x1e THIS BAND BNOT BIT29 // Everyone loves bit flipping. And it's perfectly intelligible too! Make the armour usable by Monks
+
+// 300 Install Character
 
 COPY ~Erevain/Portraits~ ~override~ // Copy Portraits to override to use them ingame
 COPY_EXISTING ~Erevain.cre~ ~override~ // The below code assumes BG2 CRE FILE info.  Adjustments will need to be made otherwise.
@@ -226,6 +243,12 @@ ADD_MEMORIZED_SPELL ~spwi110~ #0 ~wizard~ // Identify Level 1
 ADD_MEMORIZED_SPELL ~spwi214~ #1 ~wizard~ // Strength Level 2
 ADD_MEMORIZED_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
 ADD_MEMORIZED_SPELL ~spwi305~ #2 ~wizard~ // Haste Level 3
+//  PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+    ADD_CRE_ITEM ~bichan01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~ // Erevain's Elven Plate +2
+    REPLACE_CRE_ITEM ~chan12~ #0 #0 #0 ~~ ~ARMOR~ // Elven Chain +2
+//  END
+// BUT_ONLY
+
 
 // WRITE_ASCII 0x248 ~O#BranS~ #8  // override script where you put all the commands for lovetalks and such.
 // WRITE_ASCII 0x2cc ~Erevain~  #8  // dialogue file where we'll put Erevain's greeting dialogue.
