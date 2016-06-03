@@ -1,3 +1,6 @@
 ACTION_IF !FILE_EXISTS_IN_GAME ~Erevain.cre~ BEGIN // Use our own Erevain CRE if the file not in game, else start with game's file
   COPY ~Erevain/Characters/Erevain.cre~ ~override~ END
 COPY_EXISTING ~Erevain.cre~ ~override~  
+
+
+  // COPY_EXISTING chan19.itm ~override/bichan01.itm~
