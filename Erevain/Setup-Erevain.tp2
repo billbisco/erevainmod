@@ -114,8 +114,8 @@ END
 
 // 200 Install Items
   
-  COPY ~Erevain/Bams/DBIITM01.ITM~ ~override~
-  COPY ~Erevain/Bams/IBIITM01.ITM~ ~override~
+  COPY ~Erevain/Bams/DBIITM01.BAM~ ~override~
+  COPY ~Erevain/Bams/IBIITM01.BAM~ ~override~
   COPY ~Erevain/Items/BIITM01.ITM~ ~override~
   SAY NAME1 ~Erevain's Elven Plate +2~
   SAY NAME2 ~Erevain's Elven Plate +2~
