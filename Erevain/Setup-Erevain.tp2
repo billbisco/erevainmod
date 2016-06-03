@@ -114,14 +114,17 @@ END
 
 // 200 Install Items
   
+  COPY ~Erevain/Bams/DBIITM01.ITM~ ~override~
+  COPY ~Erevain/Bams/IBIITM01.ITM~ ~override~
   COPY ~Erevain/Items/BIITM01.ITM~ ~override~
   SAY NAME1 ~Erevain's Elven Plate +2~
   SAY NAME2 ~Erevain's Elven Plate +2~
   SAY UNIDENTIFIED_DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
+
 STATISTICS:
 Armor Class: 1
 Weight: 25
-Requires: 10 Strength
+Requires: 12 Strength
 Usable By:
 Erevain
 Penalties:
@@ -130,10 +133,11 @@ Open Locks -15%
 Find/Remove Traps -40%
 Move Silently -25%~
   SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
+
 STATISTICS:
 Armor Class: 1
 Weight: 25
-Requires: 10 Strength
+Requires: 12 Strength
 Usable By:
 Erevain
 Penalties:
@@ -262,7 +266,7 @@ ADD_MEMORIZED_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
 ADD_MEMORIZED_SPELL ~spwi305~ #2 ~wizard~ // Haste Level 3
 //  PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
     ADD_CRE_ITEM ~BIITM01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~ // Erevain's Elven Plate +2
-    REPLACE_CRE_ITEM ~chan12~ #0 #0 #0 ~~ ~ARMOR~ // Elven Chain +2
+//    REPLACE_CRE_ITEM ~chan12~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~ // Elven Chain +2
 //  END
 // BUT_ONLY
 
