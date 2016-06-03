@@ -123,23 +123,33 @@ COPY_EXISTING chan01.itm ~override/prefix#cha01.itm~ //note that the total file 
   COPY ~Erevain/Items/BIPlat01.itm~ ~override~
   SAY NAME1 ~Erevain's Elven Plate +2~
   SAY NAME2 ~Erevain's Elven Plate +2~
-  // SAY UNIDENTIFIED_DESC ~Erevain's Elven Plate +2~
+  SAY UNIDENTIFIED_DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
+STATISTICS:
+Armor Class: 1
+Weight: 25
+Requires: 10 Strength
+Usable By:
+Erevain
+Penalties:
+Pick Pockets -35%
+Open Locks -15%
+Find/Remove Traps -40%
+Move Silently -25%~
   SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
-  
-  	STATISTICS:
-	Armor Class: 1
-	Weight: 25
-	Requires: 10 Strength
-	Usable By:
-	Erevain
-	Penalties:
-	Pick Pockets -35%
-	Open Locks -15%
-	Find/Remove Traps -40%
-	Move Silently -25%
-	~
-WRITE_ASCII 0x003a ~IBIPLAT01.BAM~    //	8 (resref)	Inventory icon
-WRITE_ASCII 0x0058 ~CBIPLAT01.BAM~    //	8 (resref)	Description icon
+STATISTICS:
+Armor Class: 1
+Weight: 25
+Requires: 10 Strength
+Usable By:
+Erevain
+Penalties:
+Pick Pockets -35%
+Open Locks -15%
+Find/Remove Traps -40%
+Move Silently -25%~
+WRITE_ASCII 0x003a ~IBIITMT01.BAM~   	// 8 (resref)	Inventory icon
+WRITE_ASCII 0x0044 ~GPLAT01.BAM~	// 8 (resref)	Ground icon
+WRITE_ASCII 0x0058 ~DBIITM01.BAM~    	// 8 (resref)	Description icon
 
 // 300 Install Character
 
