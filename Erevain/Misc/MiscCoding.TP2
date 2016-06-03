@@ -4,3 +4,10 @@ COPY_EXISTING ~Erevain.cre~ ~override~
 
 
   // COPY_EXISTING chan19.itm ~override/bichan01.itm~
+
+
+COPY_EXISTING chan01.itm ~override/prefix#cha01.itm~ //note that the total file name, excluding file extension, must not exceed 8 characters.
+  SAY NAME1 ~Mail of the Monk~
+  SAY NAME2 ~Mail of the Monk~
+  SAY 0x50 ~Chain Mail so breezy, even Monks can wear it!~ // General description
+  SAY 0x54 ~Chain Mail so breezy, even Monks can wear it!~ // Identified description
