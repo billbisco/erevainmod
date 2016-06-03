@@ -120,13 +120,26 @@ COPY_EXISTING chan01.itm ~override/prefix#cha01.itm~ //note that the total file 
   SAY 0x50 ~Chain Mail so breezy, even Monks can wear it!~ // General description
   SAY 0x54 ~Chain Mail so breezy, even Monks can wear it!~ // Identified description
   
-  // COPY ~mymod/myitem.itm~ ~override/myitem.itm~
-  COPY_EXISTING chan19.itm ~override/bichan01.itm~
+  COPY ~Erevain/Items/BIPlat01.itm~ ~override~
   SAY NAME1 ~Erevain's Elven Plate +2~
   SAY NAME2 ~Erevain's Elven Plate +2~
   // SAY UNIDENTIFIED_DESC ~Erevain's Elven Plate +2~
-  SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.~
- // WRITE_LONG 0x1e THIS BAND BNOT BIT29 // Everyone loves bit flipping. And it's perfectly intelligible too! Make the armour usable by Monks
+  SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
+  
+  	STATISTICS:
+	Armor Class: 1
+	Weight: 25
+	Requires: 10 Strength
+	Usable By:
+	Erevain
+	Penalties:
+	Pick Pockets -35%
+	Open Locks -15%
+	Find/Remove Traps -40%
+	Move Silently -25%
+	~
+WRITE_ASCII 0x003a ~IBIPLAT01.BAM~    //	8 (resref)	Inventory icon
+WRITE_ASCII 0x0058 ~CBIPLAT01.BAM~    //	8 (resref)	Description icon
 
 // 300 Install Character
 
@@ -244,8 +257,8 @@ ADD_MEMORIZED_SPELL ~spwi214~ #1 ~wizard~ // Strength Level 2
 ADD_MEMORIZED_SPELL ~spwi212~ #1 ~wizard~ // Mirror Image Level 2
 ADD_MEMORIZED_SPELL ~spwi305~ #2 ~wizard~ // Haste Level 3
 //  PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-    ADD_CRE_ITEM ~bichan01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~ // Erevain's Elven Plate +2
-    REPLACE_CRE_ITEM ~chan12~ #0 #0 #0 ~~ ~ARMOR~ // Elven Chain +2
+    ADD_CRE_ITEM ~BIPLAT01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~ // Erevain's Elven Plate +2
+//  REPLACE_CRE_ITEM ~chan12~ #0 #0 #0 ~~ ~ARMOR~ // Elven Chain +2
 //  END
 // BUT_ONLY
 
