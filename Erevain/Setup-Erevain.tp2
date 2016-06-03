@@ -114,13 +114,9 @@ END
 
 // 200 Install Items
 
-COPY_EXISTING chan01.itm ~override/prefix#cha01.itm~ //note that the total file name, excluding file extension, must not exceed 8 characters.
-  SAY NAME1 ~Mail of the Monk~
-  SAY NAME2 ~Mail of the Monk~
-  SAY 0x50 ~Chain Mail so breezy, even Monks can wear it!~ // General description
-  SAY 0x54 ~Chain Mail so breezy, even Monks can wear it!~ // Identified description
-  
-  COPY ~Erevain/Items/BIPlat01.itm~ ~override~
+  COPY ~Erevain/Bams/IBIITMT01.BAM~ ~override~
+  COPY ~Erevain/Bams/DBIITM01.BAM~ ~override~
+  COPY ~Erevain/Items/BIITM01.ITM~ ~override~
   SAY NAME1 ~Erevain's Elven Plate +2~
   SAY NAME2 ~Erevain's Elven Plate +2~
   SAY UNIDENTIFIED_DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
