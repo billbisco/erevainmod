@@ -146,7 +146,7 @@ Open Locks -15%
 Find/Remove Traps -40%
 Move Silently -25%~
 WRITE_ASCII 0x003a ~IBIITM01.BAM~ #8 // 8 (resref)	Inventory icon
-// WRITE_ASCII 0x0044 ~GPLAT01.BAM~ #8  // 8 (resref)	Ground icon
+WRITE_ASCII 0x0044 ~GPLAT01.BAM~ #8  // 8 (resref)	Ground icon
 WRITE_ASCII 0x0058 ~DBIITM01.BAM~ #8 // 8 (resref)	Description icon
 
 // 300 Install Character
