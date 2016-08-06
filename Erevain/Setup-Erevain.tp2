@@ -149,6 +149,45 @@ WRITE_ASCII 0x003a ~IBIITM01.BAM~ #8 // 8 (resref)	Inventory icon
 WRITE_ASCII 0x0044 ~GPLAT01.BAM~ #8  // 8 (resref)	Ground icon
 WRITE_ASCII 0x0058 ~DBIITM01.BAM~ #8 // 8 (resref)	Description icon
 
+/*COPY ~Erevain/Bams/IEREVAIN.BAM~ ~override~
+  COPY ~Erevain/Items/EREVAIN.ITM~ ~override~
+  SAY NAME1 ~Erevain's Broadsword +3~
+  SAY NAME2 ~Erevain's Broadsword +3~
+  SAY UNIDENTIFIED_DESC ~This sword, an oddity amonst elves who normally prefer lighter blades, The original Greycloak owner passed this owneron after years of service.Kethryllia Amaranthine reforged this sword 1221 DR for Erevain Blacksheaf's initiation to the Evereskan Greycloaks. It has since been redecorated and openly displays the Black sheaf family crest. Erevain requested this sword be heavier and more damaging.
+
+STATISTICS:
+
+Damage: 2D4 +3
+THAC0: +3
+Damage Type: Slashing
+Resistance Bonus:
++2 Save vs. Wands
++10% Acid Resistance
+Weight: 4
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: 1-handed
+Not Usable By:
+Druid
+Cleric
+
+SAY DESC ~Llamien Blacksheaf forged this armor for Erevain Blacksheaf's adulthood ceremony. Highly ornate, flexible, protective and decorated with embellishments of the Blacksheaf family crest, this armor strikes a high bar for Elven armorsmithing. Fitted especially for Erevain, this armor is nearly impossible for others to don.
+
+STATISTICS:
+Armor Class: 1
+Weight: 25
+Requires: 12 Strength
+Usable By:
+Erevain
+Penalties:
+Pick Pockets -35%
+Open Locks -15%
+Find/Remove Traps -40%
+Move Silently -25%~
+WRITE_ASCII 0x003a ~IBIITM01.BAM~ #8 // 8 (resref)	Inventory icon
+WRITE_ASCII 0x0044 ~GPLAT01.BAM~ #8  // 8 (resref)	Ground icon
+WRITE_ASCII 0x0058 ~DBIITM01.BAM~ #8 // 8 (resref)	Description icon */
+
 // 300 Install Character
 
 COPY ~Erevain/Portraits~ ~override~ // Copy Portraits to override to use them ingame
